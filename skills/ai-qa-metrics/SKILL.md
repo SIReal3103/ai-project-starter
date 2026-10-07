@@ -155,13 +155,16 @@ Bảng lỗi: `Mã lỗi | Vấn đề & ảnh hưởng | Mong đợi/Thực t�
 
 ## 6. Bàn giao báo cáo
 
+- Nếu người dùng yêu cầu **mock**, được tạo dữ liệu tổng hợp có nhãn; ghi MOCK ở tổng quan và mọi trang PDF, gọi output là Kết quả giả lập. Chấm pass/fail chỉ trong kịch bản minh họa; ngưỡng thật vẫn chưa được phê duyệt. Không suy ra đã chạy tool/model từ số liệu mock.
+- Dùng cùng fixture cho bảng và biểu đồ. Tính số ca/tỷ lệ/percentile từ dữ liệu, giữ riêng mẫu số của query, mệnh đề, request và stream. Phần không có dữ liệu giữ null/chưa chạy; không dựng 0 lỗ hổng. Nếu mã metric trong báo cáo đánh lại số, ghi rõ là mã cục bộ hoặc ánh xạ tới M01–M34.
 - Thêm ma trận độ phủ phạm vi: test phần mềm, AI eval, thời gian/tải, bảo mật và quyền riêng tư; mỗi nhóm có đã chạy/chưa chạy/không áp dụng cùng lý do. Các bảng metric chọn từ M01–M34, không bắt buộc đo tất cả nếu sản phẩm không có tính năng.
 - Kết luận chỉ trong phạm vi đã kiểm: đã đo gì, ca nào chưa đạt, phần nào chưa kết luận và điều kiện còn thiếu để nghiệm thu. Không tự ký phê duyệt.
 - Dựng HTML Apple-like trước: nền trắng/xám nhẹ, chữ rõ, đường kẻ mảnh, bảng QA là nội dung chính; badge Đạt/Chưa đạt có chữ. Biểu đồ số ca theo nhóm và trạng thái, không vẽ số liệu chưa đo.
 - Kiểm HTML, rồi xuất chính HTML thành PDF A4 ngang. PDF mở mọi chi tiết và in mọi ca, không chỉ lấy ca đại diện. Giữ output nguyên văn; quy trình và evidence dài được tham chiếu sang bảng phụ.
 - Đối chiếu số ca, tử số/mẫu số, raw output và trạng thái giữa JSON/HTML/PDF. Kiểm mọi trang in, dấu tiếng Việt, lặp tiêu đề bảng và hàng không bị cắt.
+- Ví dụ bố cục đã đóng gói: [báo cáo mock 7 cột](https://github.com/SIReal3103/ai-project-starter/tree/main/chatbot-eval-kit/qa-report/examples/mock-acceptance-report-v2). Có fixture, script stdlib, HTML/PDF và README chạy từ checkout. Ví dụ có schema mock riêng; không ép vào renderer chỉ nhận evidence/template. Số ca/chỉ số/trang của ví dụ không là yêu cầu cho sản phẩm mới.
 - Chỉ tạo mẫu/hướng dẫn khi đó là yêu cầu hiện tại; không tự gọi API, dùng key, chạy dịch vụ trả phí hoặc publish GitHub.
 
 ## Prompt dùng skill
 
-“Dùng $ai-qa-metrics cho [sản phẩm/phạm vi]. Chọn chỉ số áp dụng, ghi dữ liệu cần có, công thức/rubric, ngưỡng đề xuất và cách lấy bằng chứng. Lập bảng QA 7 cột với cột Kết quả (Pass/Fail) riêng cùng trường tái hiện đầy đủ. Nếu chưa có kết quả thật, giữ Chưa chạy/null; không tạo điểm giả. Nếu được yêu cầu báo cáo, dựng HTML trước rồi xuất PDF từ cùng HTML.”
+“Dùng $ai-qa-metrics cho [sản phẩm/phạm vi]. Chọn chỉ số áp dụng, ghi dữ liệu cần có, công thức/rubric, ngưỡng đề xuất và cách lấy bằng chứng. Lập bảng QA 7 cột với cột Kết quả (Pass/Fail) riêng cùng trường tái hiện đầy đủ. Nếu chưa có kết quả thật, giữ Chưa chạy/null; chỉ tạo số liệu giả lập khi tôi yêu cầu mock và ghi nhãn rõ. Nếu được yêu cầu báo cáo, dựng HTML trước rồi xuất PDF từ cùng HTML.”

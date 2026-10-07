@@ -1,0 +1,13 @@
+{
+  "artifact_check_only": true,
+  "product_test_executed": false,
+  "pages": 13,
+  "qa_cases": 24,
+  "metrics": 21,
+  "all_actual_outputs_in_pdf": true,
+  "mock_label_each_page": true,
+  "text_extraction": "pdftotext -raw; layout extraction interleaves table columns",
+  "all_pages_visually_reviewed": true,
+  "desktop_and_mobile_layout_checked": true,
+  "qa_columns": 7
+}

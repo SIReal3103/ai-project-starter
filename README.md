@@ -121,6 +121,7 @@ python3 -m unittest discover -s scripts/tests -p 'test_*.py'
 
 - [ai-qa-evals](skills/ai-qa-evals/SKILL.md): quy trình thực thi test phần mềm, eval AI, đo phản hồi/tải và kiểm bảo mật/quyền riêng tư; chọn mức smoke khoảng 10 phút hoặc nghiệm thu mở rộng.
 - [ai-qa-metrics](skills/ai-qa-metrics/SKILL.md): 34 nhóm chỉ số theo tính năng, công thức/mẫu số, dữ liệu cần thu, cách kết luận và bảng QA **7 cột với Pass/Fail riêng**.
+- [Báo cáo mock mới](chatbot-eval-kit/qa-report/examples/mock-acceptance-report-v2/README.md): HTML Apple-like, PDF 13 trang, 24 ca QA, 21 chỉ số và biểu đồ; có fixture/script dựng lại. Toàn bộ dữ liệu là giả lập, không phải kết quả test sản phẩm. [Hướng dẫn agent dựng báo cáo](skills/ai-qa-evals/references/report-layout-and-mock.md).
 
 | Muốn làm gì? | Hướng dẫn thực hành |
 | --- | --- |

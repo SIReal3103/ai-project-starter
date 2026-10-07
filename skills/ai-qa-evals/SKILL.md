@@ -35,6 +35,8 @@ Cổng nghiệm thu tách: chức năng; AI; hiệu năng; bảo mật/quyền; 
 
 ## Tìm bộ công cụ
 
+Kiểm công cụ đã cài trước khi cài lại: môi trường project, lockfile và CLI/version thực. Nếu máy có `$HOME/.local/share/ai-qa-tools/README.md`, đọc hướng dẫn và `activate.sh` cạnh nó để dùng runtime đã chuẩn bị; `qa-doctor` chỉ kiểm launcher/version, không phải eval sản phẩm. Runtime này là tùy chọn riêng máy, không được tạo chỉ bằng clone repo. Giữ dependency ứng dụng trong môi trường sản phẩm; không suy ra test chạy được chỉ vì CLI chung đã có. Báo rõ advisory hoặc điều kiện còn thiếu của công cụ đang dùng.
+
 Skill này không cần file trên máy tác giả. Nếu workspace có `chatbot-eval-kit/qa-report/render.py`, dùng bộ đó và ghi commit/version. Nếu chưa có, clone vào thư mục mới trong workspace:
 
 ```sh
@@ -50,6 +52,7 @@ Git và Python 3.12+ là điều kiện đầu vào. Đọc `README.md`, `agent-
 - **Chạy lại model:** giữ dataset/prompt/version để so sánh; gọi lại model và tạo raw responses mới. Với API đọc hướng dẫn adapter `adapters/openai-chat.py` hoặc `adapters/http-product.py`. Với MLX trên macOS Apple Silicon, xem README của ví dụ `qa-report/evaluations/20261007-qwen-rerun/`; đó là bộ thử đóng băng, không phải sản phẩm mặc định.
 - **Chấm lại output:** `main.py replay` chỉ chấm câu trả lời đã có; ghi rõ không có inference mới. Lượt mới luôn dùng thư mục output mới.
 - **Chỉ xuất báo cáo:** dùng JSON có bằng chứng, không gọi lại model/API nếu không được yêu cầu.
+- **Báo cáo mock theo yêu cầu:** dùng [quy trình bố cục và dữ liệu giả lập](references/report-layout-and-mock.md). Ghi rõ mock trên HTML và từng trang PDF, giữ schema riêng của renderer mẫu; không gọi công cụ/model để làm như đã kiểm sản phẩm thật.
 
 Ghi trước lượt chạy: model/revision, dataset hash, nguồn dữ liệu thật/tổng hợp, phạm vi, budget và các điều kiện thiếu. Nếu chỉ có khoảng 10 phút, ưu tiên kiểm contract và ca trọng yếu; semantic judge chọn mẫu theo budget, không âm thầm rút mẫu rồi báo đã phủ toàn bộ.
 
@@ -72,6 +75,8 @@ Thay các đường dẫn ví dụ bằng file đã xác minh. Exit 1 có ca fai
 - Thiếu điều kiện: `blocked`; chưa chạy: `not_run`; không áp dụng cần lý do. Không biến thiếu evidence thành pass. Không trộn kiểm tra cài đặt/crawl với điểm chất lượng LLM.
 
 ## Xuất báo cáo QA
+
+Khi cần dựng hoặc chỉnh bố cục báo cáo, đọc [hướng dẫn bảng, biểu đồ và PDF](references/report-layout-and-mock.md). Ví dụ đóng gói trong repo có dữ liệu, script, HTML/PDF và lệnh dựng lại; không cần localhost hay file trên máy tác giả. Chỉ dùng số ca/trang của ví dụ để tham khảo bố cục, không làm quota cho sản phẩm mới.
 
 Sao chép `qa-report/template-data.json` sang JSON của lượt mới. Điền theo hợp đồng trong `qa-report/agent-guide.md`; mỗi ca có requirement, preconditions, steps, expected, actual nguyên văn, checks, evidence, defect và retest. Mỗi metric có định nghĩa, cách đo, ngưỡng, mẫu số, diễn giải và giới hạn. Chỉ ghi ngưỡng đã phê duyệt khi thực sự có chấp thuận; không tự ký nghiệm thu.
 
