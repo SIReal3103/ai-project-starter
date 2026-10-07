@@ -1,0 +1,16 @@
+{
+  "name": "ai-qa-tools-node",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Isolated QA tool installation; fixture smoke is not product QA",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.13.0",
+    "@playwright/test": "1.61.1",
+    "@vitest/coverage-v8": "5.0.3",
+    "vitest": "5.0.3"
+  }
+}

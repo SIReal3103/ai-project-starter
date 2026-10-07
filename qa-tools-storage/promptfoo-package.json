@@ -1,0 +1,13 @@
+{
+  "name": "ai-qa-tools-promptfoo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Isolated Promptfoo with known upstream dependency advisories",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "promptfoo": "0.124.0"
+  }
+}

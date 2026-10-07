@@ -4,6 +4,7 @@ Repo chứa hướng dẫn BTC, bộ 24 skill độc lập cho phát triển s�
 
 ## QA và eval mới nhất
 
+- [Cài hoặc chuyển bộ công cụ QA lên SSD](qa-tools-storage/README.md): clone, tạo volume APFS trên ổ ngoài, cài package, giữ đường dẫn cũ bằng symlink, mount/unmount và kiểm sau khi chuyển.
 - [Template QA Apple-like và hướng dẫn agent](chatbot-eval-kit/qa-report/README.md): ca kiểm thử có bước thực hiện, kỳ vọng/thực tế, Đạt/Chưa đạt, bằng chứng, lỗi và kiểm lại; 14 chỉ số có cách đo và diễn giải.
 - [Lượt inference mới ngày 07/10/2026](chatbot-eval-kit/qa-report/evaluations/20261007-qwen-rerun/README.md): Qwen2.5-0.5B đạt 6/24 sau audit, 18 chưa đạt; Ragas/DeepEval offline chạy lại. Dữ liệu tổng hợp, context lưu sẵn; chưa có semantic judge hoặc agent executor.
 - [HTML mới](chatbot-eval-kit/qa-report/evaluations/20261007-qwen-rerun/report.html) và [PDF mới](chatbot-eval-kit/qa-report/evaluations/20261007-qwen-rerun/report.pdf). Tải HTML về rồi mở bằng trình duyệt; trang file trên GitHub hiển thị mã nguồn.

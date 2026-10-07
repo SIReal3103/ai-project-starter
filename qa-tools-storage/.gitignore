@@ -1,0 +1,4 @@
+*.sparsebundle/
+storage.json
+migration.json
+*-differences.txt

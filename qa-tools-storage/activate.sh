@@ -1,0 +1,13 @@
+# Source this file after mounting the QA volume. No shell startup files modified.
+export QA_RUNTIME_VOLUME="${QA_RUNTIME_VOLUME:-/Volumes/AI-QA-Tools}"
+export QA_TOOLS_ROOT="$QA_RUNTIME_VOLUME/runtime/ai-qa-tools"
+export QA_PYTHON="$QA_TOOLS_ROOT/python/bin/python"
+export QA_NODE_ROOT="$QA_TOOLS_ROOT/node"
+export EVAL_RAGAS_PYTHON="$QA_RUNTIME_VOLUME/runtime/scope-data-bot-eval/python/bin/python"
+export EVAL_DEEPEVAL_PYTHON="$QA_RUNTIME_VOLUME/runtime/scope-data-bot-eval/extended-python/bin/python"
+export UV_TOOL_DIR="$QA_RUNTIME_VOLUME/uv-tools"
+export UV_CACHE_DIR="$QA_RUNTIME_VOLUME/caches/uv"
+export npm_config_cache="$QA_RUNTIME_VOLUME/caches/npm"
+export PLAYWRIGHT_BROWSERS_PATH="$QA_RUNTIME_VOLUME/caches/ms-playwright"
+export TRIVY_CACHE_DIR="$QA_RUNTIME_VOLUME/caches/trivy"
+export PATH="$QA_TOOLS_ROOT/bin:$HOME/.local/bin:$QA_NODE_ROOT/node_modules/.bin:$PATH"
