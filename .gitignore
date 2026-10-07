@@ -1,0 +1,16 @@
+.DS_Store
+._*
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.venv*/
+node_modules/
+*.log
+.env
+.env.*
+.validation/
+.playwright-browsers/
+artifacts/
+tools/evals/runs/

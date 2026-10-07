@@ -1,0 +1,2 @@
+# Use a separate Python 3.12 environment from Ragas.
+deepeval==4.2.8

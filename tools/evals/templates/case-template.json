@@ -1,0 +1,14 @@
+{
+  "id": "",
+  "category": "chatbot",
+  "question": "",
+  "expected_answer": "",
+  "history": [],
+  "contexts": [],
+  "expected": {
+    "answer_contains_all": [],
+    "answer_not_contains": []
+  },
+  "dataset_label": "user-provided",
+  "tags": []
+}
