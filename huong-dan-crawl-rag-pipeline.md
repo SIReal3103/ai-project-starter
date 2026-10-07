@@ -2,7 +2,7 @@
 
 Hướng dẫn sử dụng trang **Crawl & RAG pipeline** của ứng dụng Human Mind, đối chiếu giao diện và mã ứng dụng ngày 07/10/2026. Địa chỉ mặc định khi ứng dụng đang chạy trên máy của bạn: **http://localhost:8765/#pipeline**.
 
-Repo này chứa hướng dẫn, không đóng gói ứng dụng Human Mind hoặc dữ liệu/credential đang nằm trên máy nguồn. Clone repo không tự khởi động dịch vụ ở cổng 8765. Nếu trang không mở được, cần khởi động bản ứng dụng bạn đang sử dụng rồi mở địa chỉ của bản đó; không dùng localhost để truy cập máy người khác.
+Ứng dụng được để cùng repo trong [rag-review](rag-review/README.md). Sau clone, chạy `cd rag-review`, `bash setup.sh`, rồi `bash run.sh`; mở địa chỉ ở trên. Cần Python 3.12, Git và Bash. Không sao chép dữ liệu hoặc credential của máy nguồn. Localhost trỏ tới máy đang mở trình duyệt; nếu cổng 8765 đã được dùng, chọn `RAG_REVIEW_PORT=8766 bash run.sh` và mở cổng tương ứng.
 
 ## Luồng cần hoàn thành
 
@@ -75,7 +75,7 @@ Dùng **Tra cứu từ khóa không dùng key →**, kiểm đúng bộ tài li�
 
 | Hiện tượng | Xử lý |
 | --- | --- |
-| Trang không mở được | Kiểm ứng dụng đã chạy trên đúng máy/cổng; repo hướng dẫn không tự chạy server |
+| Trang không mở được | Kiểm ứng dụng đã chạy trên đúng máy/cổng; chạy ứng dụng theo README trong `rag-review/` |
 | Crawl không có tài liệu | Đọc trace, dùng URL bài/PDF cụ thể, thử 1 trang và độ sâu 0 |
 | DuckDuckGo HTTP 202/challenge | Chuyển sang URL trực tiếp; không đổi key AI hoặc tìm cách vượt challenge |
 | Tài liệu bị chặn duyệt | Kiểm bản gốc, lỗi parse/thiếu nội dung/metadata; sửa hoặc nhập lại nguồn đầy đủ |
