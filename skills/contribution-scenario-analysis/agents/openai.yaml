@@ -1,0 +1,4 @@
+interface:
+  display_name: "F2 — Đóng góp và mô phỏng"
+  short_description: "Phân tích đóng góp và mô phỏng giả định minh bạch"
+  default_prompt: "Dùng $contribution-scenario-analysis để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sản xuất media AI"
+  short_description: "Hướng dẫn độc lập: Tài sản, job media, render và kiểm bản xuất"
+  default_prompt: "Dùng $ai-media-production để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

@@ -1,6 +1,6 @@
-# Hướng dẫn BTC và bộ báo cáo/eval
+# Hướng dẫn, bộ skill và eval sản phẩm AI
 
-Repo chứa hướng dẫn BTC, script thử gateway và bộ báo cáo/template eval. Ứng dụng Crawl & RAG pipeline được phát triển trong [repo riêng](https://github.com/SIReal3103/crawl-rag-pipeline); thư mục `rag-review/` ở đây là bản mã lưu trước khi tách.
+Repo chứa hướng dẫn BTC, bộ 24 skill độc lập cho phát triển sản phẩm AI cùng các skill gameplay/eval, script thử gateway và bộ báo cáo/template eval. Ứng dụng Crawl & RAG pipeline được phát triển trong [repo riêng](https://github.com/SIReal3103/crawl-rag-pipeline); thư mục `rag-review/` ở đây là bản mã lưu trước khi tách.
 
 ## QA và eval mới nhất
 
@@ -26,7 +26,8 @@ Nếu đã có skill cùng tên, đối chiếu rồi cập nhật nội dung th
 | --- | --- |
 | Hướng dẫn chatbot và agent BTC — bản gốc | [agent-chatbot-btc-guide.md](agent-chatbot-btc-guide.md) |
 | Hướng dẫn voicebot BTC — bản gốc | [agent-voice-bot-btc-guide.md](agent-voice-bot-btc-guide.md) |
-| Các hướng phát triển sản phẩm — bản gốc | [cac-huong-phat-trien-san-pham-dua-vao-techstack.md](cac-huong-phat-trien-san-pham-dua-vao-techstack.md) |
+| Các hướng phát triển sản phẩm và hợp đồng kế hoạch cho agent mới | [cac-huong-phat-trien-san-pham-dua-vao-techstack.md](cac-huong-phat-trien-san-pham-dua-vao-techstack.md) |
+| Bộ 24 skill Codex — 14 hướng sản phẩm và 10 năng lực dùng chung | [Danh mục nguồn](cac-huong-phat-trien-san-pham-dua-vao-techstack.md), [catalog](skills/catalog.json) |
 | Gameplay chung cho game phiêu lưu văn bản AI | [Khung gameplay](skills/ai-story-gameplay/references/gameplay-guide.md) |
 | Skill tạo và rà soát gameplay AI | [ai-story-gameplay](skills/ai-story-gameplay/SKILL.md) |
 | Script thử gateway — bản gốc | [gateway-test.sh](gateway-test.sh) |
@@ -39,7 +40,7 @@ Nếu đã có skill cùng tên, đối chiếu rồi cập nhật nội dung th
 | **Ứng dụng Crawl & RAG pipeline** | [Repo crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline) |
 | **Hướng dẫn trang Crawl & RAG pipeline** | [huong-dan-crawl-rag-pipeline.md](huong-dan-crawl-rag-pipeline.md) |
 
-Ba hướng dẫn BTC/techstack và script gateway giữ nguyên nội dung nguồn. Báo cáo cũ trong `reports/` và bốn JSON trong `example-results/` được giữ để tham chiếu; báo cáo QA mới nằm trong `qa-report/`. ZIP chứa bộ kit hiện tại; skill nằm riêng trong `skills/` của repo.
+Hướng dẫn chatbot/voicebot BTC và script gateway giữ nguyên nội dung nguồn. Hướng dẫn techstack bổ sung hợp đồng kế hoạch/bàn giao ở phần 18.9–18.11, chế độ giao việc ở phần 21 và bộ 24 skill ở phần 22, cập nhật ngày 07/10/2026. Báo cáo cũ trong `reports/` và bốn JSON trong `example-results/` được giữ để tham chiếu; báo cáo QA mới nằm trong `qa-report/`. ZIP chứa bộ kit hiện tại; skill nằm riêng trong `skills/` của repo.
 
 ## Skill thiết kế gameplay phiêu lưu AI
 
@@ -60,6 +61,61 @@ Viết tài liệu độc lập để bàn giao cho agent; chưa triển khai �
 ```
 
 Skill cũng dùng để rà soát gameplay có sẵn. Yêu cầu thiết kế không tự cấp quyền xây app, gọi dịch vụ trả phí hoặc xuất bản. Các cơ chế và số minh họa là đề xuất cần chơi thử, không phải sản phẩm AI đã được kiểm chứng.
+## Bộ skill độc lập cho agent mới
+
+Có **24 skill**: 14 hướng C1–I2 và 10 năng lực dùng chung. Mỗi gói có `SKILL.md`, `agents/openai.yaml` và references local; không cần lịch sử chat, repo nguồn hay skill khác để hiểu cách làm. Chỉ đọc đúng phần theo tác vụ, không nạp cả bộ.
+
+| Skill | Dùng khi |
+|---|---|
+| [ai-product-planning](skills/ai-product-planning/SKILL.md) | Bối cảnh, MVP và gói kế hoạch cho agent mới |
+| [btc-gateway-integration](skills/btc-gateway-integration/SKILL.md) | Kiểm API, model và capability qua Gateway BTC |
+| [ai-agent-runtime](skills/ai-agent-runtime/SKILL.md) | State, context, tools, duyệt và khôi phục run |
+| [ai-rag-evidence](skills/ai-rag-evidence/SKILL.md) | Ingest, truy hồi theo quyền và dẫn nguồn đúng |
+| [vietnamese-voice-runtime](skills/vietnamese-voice-runtime/SKILL.md) | Thu âm, STT/TTS, sửa lượt, hủy và phát audio |
+| [ai-media-production](skills/ai-media-production/SKILL.md) | Tài sản, job media, render và kiểm bản xuất |
+| [ai-safety-privacy](skills/ai-safety-privacy/SKILL.md) | Quyền, guardrails, dữ liệu và kiểm tác động |
+| [ai-product-evaluation](skills/ai-product-evaluation/SKILL.md) | Oracle, test, AI eval và bằng chứng nghiệm thu |
+| [ai-reliability-operations](skills/ai-reliability-operations/SKILL.md) | Quota, retry, logs, release và khôi phục |
+| [ai-product-delivery](skills/ai-product-delivery/SKILL.md) | Thực hiện kế hoạch tới nghiệm thu và bàn giao |
+| [receipt-evidence-assistant](skills/receipt-evidence-assistant/SKILL.md) | Đọc và đối chiếu hóa đơn bằng dữ kiện có nguồn |
+| [local-waste-sorting](skills/local-waste-sorting/SKILL.md) | Phân loại rác theo nơi tiếp nhận và nguồn địa phương |
+| [public-service-voice-guide](skills/public-service-voice-guide/SKILL.md) | Hướng dẫn thủ tục bằng voice tiếng Việt có nguồn |
+| [fraud-response-coach](skills/fraud-response-coach/SKILL.md) | Diễn tập phản ứng trước tình huống lừa đảo |
+| [product-campaign-generator](skills/product-campaign-generator/SKILL.md) | App tạo bộ nội dung từ hồ sơ sản phẩm được duyệt |
+| [versioned-campaign-updates](skills/versioned-campaign-updates/SKILL.md) | Cập nhật nội dung theo thay đổi dữ kiện có phiên bản |
+| [grounded-data-analysis](skills/grounded-data-analysis/SKILL.md) | Hỏi số liệu, tính đúng và giải thích cùng nguồn |
+| [contribution-scenario-analysis](skills/contribution-scenario-analysis/SKILL.md) | Phân tích đóng góp và mô phỏng giả định minh bạch |
+| [voice-npc-tutor](skills/voice-npc-tutor/SKILL.md) | Luyện nói theo rubric với nhân vật có state |
+| [branching-investigation-game](skills/branching-investigation-game/SKILL.md) | Game điều tra theo nhánh với luật và bằng chứng |
+| [zalo-support-handoff](skills/zalo-support-handoff/SKILL.md) | Bot FAQ, ticket và bàn giao người trực trên Zalo |
+| [telegram-decision-workflow](skills/telegram-decision-workflow/SKILL.md) | Đề xuất, biểu quyết và nhận việc đúng quyền |
+| [local-heritage-story](skills/local-heritage-story/SKILL.md) | Tác phẩm về nghề địa phương có nguồn và quyền |
+| [branching-impact-story](skills/branching-impact-story/SKILL.md) | Tác phẩm phân nhánh có thông điệp và oracle |
+
+Chưa chọn ý tưởng: dùng `ai-product-planning`. Đã chọn sản phẩm: dùng skill hướng đó; dùng skill nền khi cần xử lý sâu phần API/RAG/voice/runtime/eval. Skill phân biệt khám phá, lập kế hoạch, review và triển khai; mỗi chế độ chỉ thực hiện phạm vi được giao. Quy định BTC chỉ áp dụng cho bối cảnh BTC đã xác nhận; repo/vòng thi phải xác định riêng.
+
+Copy **nguyên thư mục của skill muốn dùng** vào `$CODEX_HOME/skills` (nếu có cấu hình), mặc định `~/.codex/skills`. Có thể cài một hoặc cả bộ. Không copy `catalog.json` như một skill. Nếu đã có bản cài tùy chỉnh, đối chiếu trước khi thay thế. Các gói không dùng symlink tới máy tác giả.
+
+Ví dụ:
+
+```text
+Dùng $receipt-evidence-assistant lập kế hoạch cho đề sau: [đề đầy đủ].
+Repo: [đường dẫn nếu có]. Dữ liệu: [file thật hoặc trạng thái chưa nhận].
+Ràng buộc đã chốt: [quyền, provider, thời gian, ngân sách].
+Lưu gói kế hoạch để agent mới không có lịch sử chat thực hiện.
+```
+
+Khi đã giao triển khai, agent kiểm hiện trạng rồi làm luồng thật, kiểm lỗi và bàn giao bằng chứng. Không coi yêu cầu lập kế hoạch là quyền chạy inference hoặc xuất bản. Các con số/capability trong tài liệu nguồn là snapshot/đề xuất, không phải số đo hay quyền hiện có.
+
+Tài liệu techstack tại root là nguồn chuẩn. `skills/catalog.json` ánh xạ các phần nguồn tới từng gói. Sau khi sửa, chạy:
+
+```sh
+python3 scripts/sync-skills.py
+python3 scripts/sync-skills.py --check
+python3 -m unittest discover -s scripts/tests -p 'test_*.py'
+```
+
+`sync-skills.py --skill ai-product-planning` chỉ đồng bộ một gói; lệnh cũ `sync-planning-skill.py` vẫn dùng được cho gói planning. `--check` không ghi. Không sửa trực tiếp `references/` sinh tự động: `task-contract.md` chứa cách nhận việc/bàn giao, `techstack-guide.md` chứa lát cắt kỹ thuật, `planning-handoff.md` chỉ đọc khi cần kế hoạch. Cập nhật bản cài cá nhân từ gói mới sau khi sync. Kiểm cấu trúc/đồng bộ không chứng minh hành vi; cần review và thử tình huống độc lập.
 
 ## Chạy lại bộ eval
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "E1 — Gian hàng có tiếng nói"
+  short_description: "App tạo bộ nội dung từ hồ sơ sản phẩm được duyệt"
+  default_prompt: "Dùng $product-campaign-generator để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

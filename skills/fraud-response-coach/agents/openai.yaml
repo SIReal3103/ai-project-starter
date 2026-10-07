@@ -1,0 +1,4 @@
+interface:
+  display_name: "D2 — Tập nói để tự bảo vệ"
+  short_description: "Hướng dẫn độc lập: Diễn tập phản ứng trước tình huống lừa đảo"
+  default_prompt: "Dùng $fraud-response-coach để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

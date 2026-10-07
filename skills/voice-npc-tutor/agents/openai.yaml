@@ -1,0 +1,4 @@
+interface:
+  display_name: "G1 — Luyện hội thoại với NPC"
+  short_description: "Hướng dẫn độc lập: Luyện nói theo rubric với nhân vật có state"
+  default_prompt: "Dùng $voice-npc-tutor để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "H1 — Zalo hỗ trợ và chuyển việc"
+  short_description: "Bot FAQ, ticket và bàn giao người trực trên Zalo"
+  default_prompt: "Dùng $zalo-support-handoff để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vận hành và chi phí AI"
+  short_description: "Hướng dẫn độc lập: Quota, retry, logs, release và khôi phục"
+  default_prompt: "Dùng $ai-reliability-operations để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

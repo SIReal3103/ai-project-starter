@@ -1,0 +1,4 @@
+interface:
+  display_name: "I1 — Nghề quê còn mãi"
+  short_description: "Hướng dẫn độc lập: Tác phẩm về nghề địa phương có nguồn và quyền"
+  default_prompt: "Dùng $local-heritage-story để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

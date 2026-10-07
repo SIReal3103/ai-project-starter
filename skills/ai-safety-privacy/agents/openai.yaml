@@ -1,0 +1,4 @@
+interface:
+  display_name: "An toàn và quyền riêng tư AI"
+  short_description: "Hướng dẫn độc lập: Quyền, guardrails, dữ liệu và kiểm tác động"
+  default_prompt: "Dùng $ai-safety-privacy để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

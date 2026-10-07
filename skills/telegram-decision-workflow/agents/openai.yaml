@@ -1,0 +1,4 @@
+interface:
+  display_name: "H2 — Telegram quyết định và việc"
+  short_description: "Hướng dẫn độc lập: Đề xuất, biểu quyết và nhận việc đúng quyền"
+  default_prompt: "Dùng $telegram-decision-workflow để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

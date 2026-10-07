@@ -1,0 +1,4 @@
+interface:
+  display_name: "I2 — Một lựa chọn, hai kết cục"
+  short_description: "Hướng dẫn độc lập: Tác phẩm phân nhánh có thông điệp và oracle"
+  default_prompt: "Dùng $branching-impact-story để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

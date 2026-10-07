@@ -1,0 +1,4 @@
+interface:
+  display_name: "D1 — Một cửa dễ nghe"
+  short_description: "Hướng dẫn thủ tục bằng voice tiếng Việt có nguồn"
+  default_prompt: "Dùng $public-service-voice-guide để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

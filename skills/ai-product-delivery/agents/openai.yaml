@@ -1,0 +1,4 @@
+interface:
+  display_name: "Triển khai và bàn giao AI"
+  short_description: "Hướng dẫn độc lập: Thực hiện kế hoạch tới nghiệm thu và bàn giao"
+  default_prompt: "Dùng $ai-product-delivery để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

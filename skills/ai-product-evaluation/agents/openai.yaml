@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kiểm thử và eval sản phẩm AI"
+  short_description: "Oracle, test, AI eval và bằng chứng nghiệm thu"
+  default_prompt: "Dùng $ai-product-evaluation để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

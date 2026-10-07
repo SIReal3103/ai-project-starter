@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent runtime và công cụ"
+  short_description: "Hướng dẫn độc lập: State, context, tools, duyệt và khôi phục run"
+  default_prompt: "Dùng $ai-agent-runtime để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

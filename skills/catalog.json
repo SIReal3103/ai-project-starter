@@ -1,0 +1,421 @@
+{
+  "version": 1,
+  "source": "cac-huong-phat-trien-san-pham-dua-vao-techstack.md",
+  "shared_contract_section": "22.2",
+  "planning_sections": [
+    "18.9",
+    "18.10",
+    "18.11",
+    "21"
+  ],
+  "skills": [
+    {
+      "name": "ai-product-planning",
+      "kind": "shared",
+      "title": "Kế hoạch sản phẩm AI",
+      "summary": "Bối cảnh, MVP và gói kế hoạch cho agent mới",
+      "primary_sections": [
+        "1",
+        "2",
+        "3",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "source_sections": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
+      ]
+    },
+    {
+      "name": "btc-gateway-integration",
+      "kind": "shared",
+      "title": "Tích hợp Gateway BTC",
+      "summary": "Kiểm API, model và capability qua Gateway BTC",
+      "primary_sections": [
+        "4"
+      ],
+      "source_sections": [
+        "1",
+        "4",
+        "15"
+      ]
+    },
+    {
+      "name": "ai-agent-runtime",
+      "kind": "shared",
+      "title": "Agent runtime và công cụ",
+      "summary": "State, context, tools, duyệt và khôi phục run",
+      "primary_sections": [
+        "12.1",
+        "12.2",
+        "12.3",
+        "12.7",
+        "12.8"
+      ],
+      "source_sections": [
+        "1",
+        "3.1",
+        "12.1",
+        "12.2",
+        "12.3",
+        "12.7",
+        "12.8",
+        "15.2"
+      ]
+    },
+    {
+      "name": "ai-rag-evidence",
+      "kind": "shared",
+      "title": "RAG có bằng chứng",
+      "summary": "Ingest, truy hồi theo quyền và dẫn nguồn đúng",
+      "primary_sections": [
+        "12.4"
+      ],
+      "source_sections": [
+        "1",
+        "3.3",
+        "12.1",
+        "12.4",
+        "14.1",
+        "14.2",
+        "14.3"
+      ]
+    },
+    {
+      "name": "vietnamese-voice-runtime",
+      "kind": "shared",
+      "title": "Voice runtime tiếng Việt",
+      "summary": "Thu âm, STT/TTS, sửa lượt, hủy và phát audio",
+      "primary_sections": [
+        "12.5"
+      ],
+      "source_sections": [
+        "1",
+        "6",
+        "12.5",
+        "12.8",
+        "14.3",
+        "15.2"
+      ]
+    },
+    {
+      "name": "ai-media-production",
+      "kind": "shared",
+      "title": "Sản xuất media AI",
+      "summary": "Tài sản, job media, render và kiểm bản xuất",
+      "primary_sections": [
+        "12.6"
+      ],
+      "source_sections": [
+        "1",
+        "11",
+        "12.6",
+        "14.3",
+        "15.1",
+        "15.2"
+      ]
+    },
+    {
+      "name": "ai-safety-privacy",
+      "kind": "shared",
+      "title": "An toàn và quyền riêng tư AI",
+      "summary": "Quyền, guardrails, dữ liệu và kiểm tác động",
+      "primary_sections": [
+        "13"
+      ],
+      "source_sections": [
+        "1",
+        "12.3",
+        "13",
+        "14.6"
+      ]
+    },
+    {
+      "name": "ai-product-evaluation",
+      "kind": "shared",
+      "title": "Kiểm thử và eval sản phẩm AI",
+      "summary": "Oracle, test, AI eval và bằng chứng nghiệm thu",
+      "primary_sections": [
+        "14"
+      ],
+      "source_sections": [
+        "1",
+        "14",
+        "17"
+      ]
+    },
+    {
+      "name": "ai-reliability-operations",
+      "kind": "shared",
+      "title": "Vận hành và chi phí AI",
+      "summary": "Quota, retry, logs, release và khôi phục",
+      "primary_sections": [
+        "12.9",
+        "15"
+      ],
+      "source_sections": [
+        "1",
+        "12.8",
+        "12.9",
+        "15"
+      ]
+    },
+    {
+      "name": "ai-product-delivery",
+      "kind": "shared",
+      "title": "Triển khai và bàn giao AI",
+      "summary": "Thực hiện kế hoạch tới nghiệm thu và bàn giao",
+      "primary_sections": [
+        "16",
+        "17"
+      ],
+      "source_sections": [
+        "1",
+        "3.2",
+        "16",
+        "17",
+        "20"
+      ]
+    },
+    {
+      "name": "receipt-evidence-assistant",
+      "kind": "product",
+      "title": "C1 — Soi hóa đơn",
+      "summary": "Đọc và đối chiếu hóa đơn bằng dữ kiện có nguồn",
+      "primary_sections": [
+        "C1"
+      ],
+      "source_sections": [
+        "1",
+        "5",
+        "12.1",
+        "12.4",
+        "14.3"
+      ]
+    },
+    {
+      "name": "local-waste-sorting",
+      "kind": "product",
+      "title": "C2 — Bỏ đúng chỗ",
+      "summary": "Phân loại rác theo nơi tiếp nhận và nguồn địa phương",
+      "primary_sections": [
+        "C2"
+      ],
+      "source_sections": [
+        "1",
+        "5",
+        "12.4",
+        "14.3"
+      ]
+    },
+    {
+      "name": "public-service-voice-guide",
+      "kind": "product",
+      "title": "D1 — Một cửa dễ nghe",
+      "summary": "Hướng dẫn thủ tục bằng voice tiếng Việt có nguồn",
+      "primary_sections": [
+        "D1"
+      ],
+      "source_sections": [
+        "1",
+        "6",
+        "12.4",
+        "12.5",
+        "14.3"
+      ]
+    },
+    {
+      "name": "fraud-response-coach",
+      "kind": "product",
+      "title": "D2 — Tập nói để tự bảo vệ",
+      "summary": "Diễn tập phản ứng trước tình huống lừa đảo",
+      "primary_sections": [
+        "D2"
+      ],
+      "source_sections": [
+        "1",
+        "6",
+        "12.5",
+        "13.3",
+        "14.3"
+      ]
+    },
+    {
+      "name": "product-campaign-generator",
+      "kind": "product",
+      "title": "E1 — Gian hàng có tiếng nói",
+      "summary": "App tạo bộ nội dung từ hồ sơ sản phẩm được duyệt",
+      "primary_sections": [
+        "E1"
+      ],
+      "source_sections": [
+        "1",
+        "7",
+        "12.6",
+        "14.3"
+      ]
+    },
+    {
+      "name": "versioned-campaign-updates",
+      "kind": "product",
+      "title": "E2 — Chiến dịch luôn đúng",
+      "summary": "Cập nhật nội dung theo thay đổi dữ kiện có phiên bản",
+      "primary_sections": [
+        "E2"
+      ],
+      "source_sections": [
+        "1",
+        "7",
+        "12.6",
+        "14.3"
+      ]
+    },
+    {
+      "name": "grounded-data-analysis",
+      "kind": "product",
+      "title": "F1 — Phân tích có bằng chứng",
+      "summary": "Hỏi số liệu, tính đúng và giải thích cùng nguồn",
+      "primary_sections": [
+        "F1"
+      ],
+      "source_sections": [
+        "1",
+        "8",
+        "12.1",
+        "12.4",
+        "14.3"
+      ]
+    },
+    {
+      "name": "contribution-scenario-analysis",
+      "kind": "product",
+      "title": "F2 — Đóng góp và mô phỏng",
+      "summary": "Phân tích đóng góp và mô phỏng giả định minh bạch",
+      "primary_sections": [
+        "F2"
+      ],
+      "source_sections": [
+        "1",
+        "8",
+        "12.1",
+        "14.3"
+      ]
+    },
+    {
+      "name": "voice-npc-tutor",
+      "kind": "product",
+      "title": "G1 — Luyện hội thoại với NPC",
+      "summary": "Luyện nói theo rubric với nhân vật có state",
+      "primary_sections": [
+        "G1"
+      ],
+      "source_sections": [
+        "1",
+        "9",
+        "12.2",
+        "12.5",
+        "14.3",
+        "17"
+      ]
+    },
+    {
+      "name": "branching-investigation-game",
+      "kind": "product",
+      "title": "G2 — Điều tra kiến thức",
+      "summary": "Game điều tra theo nhánh với luật và bằng chứng",
+      "primary_sections": [
+        "G2"
+      ],
+      "source_sections": [
+        "1",
+        "9",
+        "12.2",
+        "14.3",
+        "17"
+      ]
+    },
+    {
+      "name": "zalo-support-handoff",
+      "kind": "product",
+      "title": "H1 — Zalo hỗ trợ và chuyển việc",
+      "summary": "Bot FAQ, ticket và bàn giao người trực trên Zalo",
+      "primary_sections": [
+        "H1"
+      ],
+      "source_sections": [
+        "1",
+        "10",
+        "12.3",
+        "13",
+        "14.3"
+      ]
+    },
+    {
+      "name": "telegram-decision-workflow",
+      "kind": "product",
+      "title": "H2 — Telegram quyết định và việc",
+      "summary": "Đề xuất, biểu quyết và nhận việc đúng quyền",
+      "primary_sections": [
+        "H2"
+      ],
+      "source_sections": [
+        "1",
+        "10",
+        "12.3",
+        "13",
+        "14.3"
+      ]
+    },
+    {
+      "name": "local-heritage-story",
+      "kind": "product",
+      "title": "I1 — Nghề quê còn mãi",
+      "summary": "Tác phẩm về nghề địa phương có nguồn và quyền",
+      "primary_sections": [
+        "I1"
+      ],
+      "source_sections": [
+        "1",
+        "11",
+        "12.6",
+        "14.3"
+      ]
+    },
+    {
+      "name": "branching-impact-story",
+      "kind": "product",
+      "title": "I2 — Một lựa chọn, hai kết cục",
+      "summary": "Tác phẩm phân nhánh có thông điệp và oracle",
+      "primary_sections": [
+        "I2"
+      ],
+      "source_sections": [
+        "1",
+        "11",
+        "12.6",
+        "14.3"
+      ]
+    }
+  ]
+}

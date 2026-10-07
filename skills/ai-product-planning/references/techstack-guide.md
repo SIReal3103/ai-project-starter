@@ -1,14 +1,6 @@
-# Các hướng phát triển sản phẩm dựa vào techstack
+<!-- Generated from cac-huong-phat-trien-san-pham-dua-vao-techstack.md; sections 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21; sha256 2d4568876ea8e3aa86447c9e668b647ab3840eb9decded38b3ba4f5d1ad334dc. Edit the source and run scripts/sync-skills.py. -->
 
-Ngày cập nhật: 07/10/2026. Bối cảnh nguồn: chuẩn bị cùng đội Delta Mind AITC 468. Phạm vi: tìm ý tưởng, chọn và kết hợp công nghệ, lập kế hoạch độc lập bối cảnh, xây MVP, đánh giá và bàn giao sản phẩm AI. Các đề C–I là 14 phương án minh họa; quy trình cũng áp dụng cho đề mới.
-
-Bắt đầu từ vấn đề, dữ liệu và kết quả cần đạt; dùng techstack để thực hiện và kiểm chứng phương án. Với đề mới, đi theo quy trình tám bước ở phần 18 và ví dụ trọn luồng ở phần 19. Khi giao kế hoạch cho agent không có lịch sử chat, dùng hợp đồng đầu ra và phép kiểm ở phần 18.9–18.11. Phần 3 giúp chọn công nghệ, phần 4–17 cung cấp hợp đồng triển khai, phần 20 chuyển khung học 15 ngày thành đầu ra sản phẩm, phần 21 là mẫu giao việc và phần 22 ánh xạ toàn bộ nội dung thành 24 skill độc lập.
-
-Xác định chế độ ngay đầu nhiệm vụ: **khám phá** (chọn phương án), **lập kế hoạch** (bàn giao hướng dẫn thực hiện), **review kế hoạch** (đánh giá bản có sẵn) hoặc **triển khai** (sửa sản phẩm). Yêu cầu đưa hướng phát triển/lập kế hoạch không tự cấp quyền xây app, chạy inference tốn phí hoặc công bố. Agent lập kế hoạch vẫn đọc repo, kiểm file và thực hiện kiểm tra local phù hợp để giảm phần phải đoán.
-
-Các ràng buộc riêng về Gateway BTC, đội Delta Mind, AI Log và thư mục `chung-khao/` chỉ áp dụng khi nhiệm vụ thuộc bối cảnh thi đó. Với dự án khác, lấy repository, provider, quyền và thư mục từ yêu cầu cùng bằng chứng dự án; không tự mang ràng buộc của ví dụ sang. Snapshot model/API và ví dụ không chứng minh capability hiện tại đã được cấp hoặc đã kiểm.
-
-Đây là tài liệu độc lập: các yêu cầu sản phẩm, công nghệ, hợp đồng tích hợp, bảo mật, evals và quy trình cần dùng được viết đầy đủ bên dưới. Không cần mở một file hướng dẫn khác để hiểu hoặc thực hiện các phương án. Đường dẫn đầu ra và tên module trong tài liệu là cấu trúc sẽ tạo khi triển khai, không phải tài liệu phụ bắt buộc phải đọc.
+Phần BTC chỉ áp dụng khi nhiệm vụ thuộc bối cảnh BTC; đường dẫn đội/vòng cần được xác nhận riêng. Model/API, budget và ngưỡng trong nguồn là snapshot hoặc đề xuất, không chứng minh quyền/capability/kết quả hiện tại.
 
 ## 1 Nhiệm vụ và nguyên tắc thực hiện
 
@@ -1570,61 +1562,3 @@ Giữ đúng quyền commit/push/deploy; yêu cầu lập kế hoạch không c�
 ~~~
 
 Nếu gói đầu vào thiếu, agent tự scout phần tìm được và chỉ hỏi quyết định còn thiếu. Các ô biểu mẫu trên là hướng dẫn thu thập, không phải thông tin đã được xác nhận hoặc prompt cuối cùng để chuyển nguyên xi cho agent thực hiện.
-
-## 22 Bộ skill độc lập cho từng hướng và năng lực
-
-Bộ này có 24 skill: 14 hướng sản phẩm C1–I2 và 10 năng lực dùng chung. Chọn theo tác vụ thực, không nạp cả bộ hoặc triển khai tất cả hướng. Các mục thuật ngữ, bảng stack, ví dụ và khung học là tham chiếu cho năng lực liên quan, không phải mỗi tiêu đề đều cần một skill rỗng. Tên C1–I2 là hướng minh họa, không chứng minh BTC đã ra đề hoặc chốt rubric.
-
-### 22.1 Chọn skill và truy vết về nguồn
-
-| Skill | Phần nguồn chính | Khi dùng |
-|---|---|---|
-| [ai-product-planning](skills/ai-product-planning/SKILL.md) | 1, 2, 3, 18, 19, 20, 21 | Bối cảnh, MVP và gói kế hoạch cho agent mới |
-| [btc-gateway-integration](skills/btc-gateway-integration/SKILL.md) | 4 | Kiểm API, model và capability qua Gateway BTC |
-| [ai-agent-runtime](skills/ai-agent-runtime/SKILL.md) | 12.1, 12.2, 12.3, 12.7, 12.8 | State, context, tools, duyệt và khôi phục run |
-| [ai-rag-evidence](skills/ai-rag-evidence/SKILL.md) | 12.4 | Ingest, truy hồi theo quyền và dẫn nguồn đúng |
-| [vietnamese-voice-runtime](skills/vietnamese-voice-runtime/SKILL.md) | 12.5 | Thu âm, STT/TTS, sửa lượt, hủy và phát audio |
-| [ai-media-production](skills/ai-media-production/SKILL.md) | 12.6 | Tài sản, job media, render và kiểm bản xuất |
-| [ai-safety-privacy](skills/ai-safety-privacy/SKILL.md) | 13 | Quyền, guardrails, dữ liệu và kiểm tác động |
-| [ai-product-evaluation](skills/ai-product-evaluation/SKILL.md) | 14 | Oracle, test, AI eval và bằng chứng nghiệm thu |
-| [ai-reliability-operations](skills/ai-reliability-operations/SKILL.md) | 12.9, 15 | Quota, retry, logs, release và khôi phục |
-| [ai-product-delivery](skills/ai-product-delivery/SKILL.md) | 16, 17 | Thực hiện kế hoạch tới nghiệm thu và bàn giao |
-| [receipt-evidence-assistant](skills/receipt-evidence-assistant/SKILL.md) | C1 | Đọc và đối chiếu hóa đơn bằng dữ kiện có nguồn |
-| [local-waste-sorting](skills/local-waste-sorting/SKILL.md) | C2 | Phân loại rác theo nơi tiếp nhận và nguồn địa phương |
-| [public-service-voice-guide](skills/public-service-voice-guide/SKILL.md) | D1 | Hướng dẫn thủ tục bằng voice tiếng Việt có nguồn |
-| [fraud-response-coach](skills/fraud-response-coach/SKILL.md) | D2 | Diễn tập phản ứng trước tình huống lừa đảo |
-| [product-campaign-generator](skills/product-campaign-generator/SKILL.md) | E1 | App tạo bộ nội dung từ hồ sơ sản phẩm được duyệt |
-| [versioned-campaign-updates](skills/versioned-campaign-updates/SKILL.md) | E2 | Cập nhật nội dung theo thay đổi dữ kiện có phiên bản |
-| [grounded-data-analysis](skills/grounded-data-analysis/SKILL.md) | F1 | Hỏi số liệu, tính đúng và giải thích cùng nguồn |
-| [contribution-scenario-analysis](skills/contribution-scenario-analysis/SKILL.md) | F2 | Phân tích đóng góp và mô phỏng giả định minh bạch |
-| [voice-npc-tutor](skills/voice-npc-tutor/SKILL.md) | G1 | Luyện nói theo rubric với nhân vật có state |
-| [branching-investigation-game](skills/branching-investigation-game/SKILL.md) | G2 | Game điều tra theo nhánh với luật và bằng chứng |
-| [zalo-support-handoff](skills/zalo-support-handoff/SKILL.md) | H1 | Bot FAQ, ticket và bàn giao người trực trên Zalo |
-| [telegram-decision-workflow](skills/telegram-decision-workflow/SKILL.md) | H2 | Đề xuất, biểu quyết và nhận việc đúng quyền |
-| [local-heritage-story](skills/local-heritage-story/SKILL.md) | I1 | Tác phẩm về nghề địa phương có nguồn và quyền |
-| [branching-impact-story](skills/branching-impact-story/SKILL.md) | I2 | Tác phẩm phân nhánh có thông điệp và oracle |
-
-Nếu chưa biết chọn hướng nào, bắt đầu bằng ai-product-planning. Nếu đã chọn sản phẩm, dùng đúng skill sản phẩm; chỉ thêm skill năng lực khi cần làm phần đó sâu hơn. Một skill sản phẩm đã mang contracts tối thiểu để dùng độc lập; không phải cài cả bộ. Phần 12 được phân vào runtime, RAG, voice, media và vận hành; phần 1–3/18–21 vào planning cùng các ràng buộc chung; phần 16–17 vào delivery. Tất cả nội dung 1–21 có nơi sử dụng.
-
-### 22.2 Hợp đồng bắt đầu và bàn giao áp dụng cho từng skill
-
-Một agent mới nhận skill phải làm theo nhiệm vụ thực tế, không cần lịch sử chat của tác giả:
-
-1. **Nhận việc:** nhắc lại đề/người dùng/kết quả cần có; xác định khám phá, lập kế hoạch, review hay triển khai. Giữ quyết định đã chốt. Review-only trả findings có vị trí và bằng chứng; chỉ sửa khi yêu cầu gồm sửa. Lập kế hoạch không tự cho phép xây sản phẩm hoặc chạy inference tốn phí.
-2. **Scout trước hỏi:** đọc hướng dẫn dự án, hiện trạng repo/root/nhánh, stack/entrypoint và tài sản được phép; phân biệt file/lệnh đã có với dự kiến. Không đọc/in credential. Chưa có repo thì ghi root chưa xác định và bước cần làm để xác định; không đặt đường dẫn máy tác giả thành phụ thuộc.
-3. **Chốt đầu vào:** với dữ liệu/asset/API/luật ghi vị trí hoặc cách nhận, owner, quyền, phiên bản/hiệu lực và trạng thái. Lời hứa cung cấp khác file đã có; documented khác verified. Chỉ áp Gateway BTC/AI Log khi thuộc bối cảnh đó; chỉ áp repo đội và chung-khao khi đúng repository/vòng đã xác nhận. Ngoài bối cảnh đó giữ provider, kênh và đường dẫn người dùng đã chọn.
-4. **Giải khoảng trống:** thiếu thông tin tìm được trong repo thì đọc trước; thiếu quyết định nghiệp vụ/quyền thì hỏi tập trung. Mỗi khoảng trống có owner hoặc người cần chỉ định, bằng chứng cần, nhánh bị chặn và việc vẫn làm được. Giả định dễ đảo ngược phải có nhãn. Không tự bịa dữ liệu/luật, KPI hay capability để mở gate.
-5. **Thiết kế và làm:** dùng quy trình chuyên biệt của skill, một luồng chính, stack hiện có phù hợp. Tách AI đề xuất/diễn đạt, code kiểm/tính/commit và con người quyết định. Chỉ thêm công nghệ khi gắn bước xử lý và phép kiểm; không mặc định DB/agent/app cho tác phẩm tĩnh.
-6. **Quyền và tác động:** thực hiện trong quyền đã cấp, không hỏi lại quyền rõ ràng. Chuẩn bị/phê duyệt/commit chỉ tách khi nghiệp vụ cần; xác nhận gắn đúng payload/version. Tạo nội dung không tự cấp quyền đăng hoặc gửi người khác. Không gọi API/live scan/kênh ngoài phạm vi; không đổi provider âm thầm.
-7. **Kiểm:** yêu cầu → hành vi → case → oracle độc lập → điều kiện đạt. Giữ ca thường, thiếu/mơ hồ, lỗi/hủy phù hợp. Phân biệt syntax, test offline, integration thật và nghiệm thu. Ngưỡng/số mẫu/timebox trong ví dụ là đề xuất; giữ lựa chọn user, không tự biến thành chuẩn BTC hoặc số đo. Lỗi quyền/tác động/dữ kiện nghiêm trọng chặn phần liên quan; inconclusive không là pass.
-8. **Bàn giao:** tóm tắt bối cảnh, scope, file/phiên bản, lệnh đã chạy hoặc dự kiến, bằng chứng, lỗi và bước tiếp theo. Kế hoạch cần điểm vào, phase có input/output/dependencies/files/steps/checks/rollback và ma trận nghiệm thu theo phần 18.9–18.11. Giữ báo cáo ngắn đủ thực hiện; dẫn contracts chung trong gói thay vì lặp. Sản phẩm chỉ báo xong khi đầu ra thật đạt kiểm.
-
-Tài sản hư cấu hoặc fixture chỉ dùng đúng mục đích được ghi nhãn; không thay inference/side effect thật rồi công bố demo đã chạy. Các snapshot kỹ thuật phải được đối chiếu với phiên bản/provider được cấp trước khi dựa vào; không cần chạy live hoặc tra mọi API chỉ để đọc/lập kế hoạch.
-
-### 22.3 Cấu trúc và đồng bộ gói
-
-Mỗi thư mục skill có SKILL.md với name/description chuẩn, agents/openai.yaml và ba tham chiếu local: task-contract.md để bắt đầu; techstack-guide.md chứa các phần nguồn liên quan; planning-handoff.md chỉ đọc khi cần gói kế hoạch. Không cần skill khác hoặc Internet để hiểu hướng dẫn đã đóng gói. Tài liệu kỹ thuật hiện hành vẫn phải kiểm khi triển khai API có thể thay đổi.
-
-skills/catalog.json là ánh xạ nguồn; scripts/sync-skills.py tạo các tham chiếu, --check phát hiện thiếu/lệch bản mà không ghi. Không sửa bản tham chiếu sinh tự động. Cập nhật tài liệu gốc, đồng bộ rồi kiểm trước khi copy gói vào thư mục skill cá nhân. Skill entrypoint được viết riêng theo từng nhiệm vụ; không chỉ đổi tên trên một template chung. Metadata discovery phải hẹp để skill nội dung không tự kích hoạt xây app hoặc audit toàn bộ.
-
-Ví dụ giao việc: “Dùng skill receipt-evidence-assistant để lập kế hoạch cho đề sau [đề đầy đủ], repo [nơi có thật], dữ liệu [file hoặc trạng thái chưa nhận], giới hạn [quyền/ngân sách/thời gian]. Bàn giao để agent khác không có lịch sử chat thực hiện.” Khi đã giao triển khai, cung cấp gói kế hoạch và quyền tương ứng; không coi ví dụ này là dữ kiện hiện tại.

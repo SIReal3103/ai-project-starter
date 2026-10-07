@@ -1,0 +1,4 @@
+interface:
+  display_name: "G2 — Điều tra kiến thức"
+  short_description: "Game điều tra theo nhánh với luật và bằng chứng"
+  default_prompt: "Dùng $branching-investigation-game để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "E2 — Chiến dịch luôn đúng"
+  short_description: "Cập nhật nội dung theo thay đổi dữ kiện có phiên bản"
+  default_prompt: "Dùng $versioned-campaign-updates để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

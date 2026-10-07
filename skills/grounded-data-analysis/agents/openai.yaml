@@ -1,0 +1,4 @@
+interface:
+  display_name: "F1 — Phân tích có bằng chứng"
+  short_description: "Hỏi số liệu, tính đúng và giải thích cùng nguồn"
+  default_prompt: "Dùng $grounded-data-analysis để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

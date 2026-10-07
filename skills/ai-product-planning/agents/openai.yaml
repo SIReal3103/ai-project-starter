@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Product Planning"
+  short_description: "Kế hoạch sản phẩm AI cho agent chưa có bối cảnh"
+  default_prompt: "Dùng $ai-product-planning để biến đề bài này thành kế hoạch có đủ bối cảnh, hợp đồng và tiêu chí nghiệm thu cho agent mới."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Voice runtime tiếng Việt"
+  short_description: "Hướng dẫn độc lập: Thu âm, STT/TTS, sửa lượt, hủy và phát audio"
+  default_prompt: "Dùng $vietnamese-voice-runtime để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

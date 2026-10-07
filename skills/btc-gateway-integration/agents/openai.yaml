@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tích hợp Gateway BTC"
+  short_description: "Hướng dẫn độc lập: Kiểm API, model và capability qua Gateway BTC"
+  default_prompt: "Dùng $btc-gateway-integration để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."

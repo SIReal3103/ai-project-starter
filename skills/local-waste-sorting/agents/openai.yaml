@@ -1,0 +1,4 @@
+interface:
+  display_name: "C2 — Bỏ đúng chỗ"
+  short_description: "Phân loại rác theo nơi tiếp nhận và nguồn địa phương"
+  default_prompt: "Dùng $local-waste-sorting để thực hiện nhiệm vụ sau theo đúng phạm vi, với đầu vào, các bước và tiêu chí nghiệm thu rõ ràng."
