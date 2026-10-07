@@ -1,0 +1,7 @@
+{
+  "dataset_sha256": "2033abb06f4190cb9626d5edf1475a5a89cb3c8ac945e7b67514f0e808ac11c7",
+  "requests_sha256": "c7d59fadfe6a01d7255f58880b82b4a16bb825b8b0439bc514d7b6c13cab2786",
+  "frozen_before_inference": true,
+  "cases": 24,
+  "created_at": "2026-10-07T15:59:02+0700"
+}

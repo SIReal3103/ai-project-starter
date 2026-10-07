@@ -1,0 +1,192 @@
+{
+  "job_id": "8f218a2669404a54bd00bbaef4955c25",
+  "status": "needs_review",
+  "updated_at": "2026-10-07T08:59:46.913564+00:00",
+  "incomplete": false,
+  "current": null,
+  "events": [
+    {
+      "id": "n00001",
+      "parents": [],
+      "stage": "scope",
+      "stage_label": "Xác định phạm vi",
+      "label": "Yêu cầu đầu vào",
+      "status": "success",
+      "at": "2026-10-07T08:59:02.964605+00:00",
+      "url": "",
+      "path": "",
+      "issue_id": null
+    },
+    {
+      "id": "n00002",
+      "parents": [
+        "n00001"
+      ],
+      "stage": "scope",
+      "stage_label": "Xác định phạm vi",
+      "label": "scope.json",
+      "status": "success",
+      "at": "2026-10-07T08:59:02.967184+00:00",
+      "url": "",
+      "path": "scope.json",
+      "issue_id": null
+    },
+    {
+      "id": "n00003",
+      "parents": [
+        "n00001"
+      ],
+      "stage": "discovery",
+      "stage_label": "Chọn nguồn",
+      "label": "Nguồn do người dùng chỉ định",
+      "status": "success",
+      "at": "2026-10-07T08:59:02.968522+00:00",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "path": "",
+      "issue_id": null
+    },
+    {
+      "id": "n00004",
+      "parents": [
+        "n00003"
+      ],
+      "stage": "discovery",
+      "stage_label": "Chọn nguồn",
+      "label": "Chọn URL",
+      "status": "success",
+      "at": "2026-10-07T08:59:02.970261+00:00",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "path": "",
+      "issue_id": null
+    },
+    {
+      "id": "n00005",
+      "parents": [
+        "n00004"
+      ],
+      "stage": "crawl",
+      "stage_label": "Tải nguồn",
+      "label": "page",
+      "status": "success",
+      "at": "2026-10-07T08:59:02.971117+00:00",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "path": "",
+      "issue_id": null
+    },
+    {
+      "id": "n00006",
+      "parents": [
+        "n00005"
+      ],
+      "stage": "crawl",
+      "stage_label": "Tải nguồn",
+      "label": "robots",
+      "status": "success",
+      "at": "2026-10-07T08:59:02.989827+00:00",
+      "url": "https://docs.python.org/robots.txt",
+      "path": "",
+      "issue_id": null
+    },
+    {
+      "id": "n00007",
+      "parents": [
+        "n00006"
+      ],
+      "stage": "crawl",
+      "stage_label": "Tải nguồn",
+      "label": "raw/001-robots-ddf15edaeea8.txt",
+      "status": "success",
+      "at": "2026-10-07T08:59:03.451770+00:00",
+      "url": "",
+      "path": "raw/001-robots-ddf15edaeea8.txt",
+      "issue_id": null
+    },
+    {
+      "id": "n00008",
+      "parents": [
+        "n00005"
+      ],
+      "stage": "crawl",
+      "stage_label": "Tải nguồn",
+      "label": "raw/002-page-600ed80828b8.html",
+      "status": "success",
+      "at": "2026-10-07T08:59:03.953878+00:00",
+      "url": "",
+      "path": "raw/002-page-600ed80828b8.html",
+      "issue_id": null
+    },
+    {
+      "id": "n00009",
+      "parents": [
+        "n00008"
+      ],
+      "stage": "parse",
+      "stage_label": "Trích xuất",
+      "label": "Trích nội dung tài liệu",
+      "status": "success",
+      "at": "2026-10-07T08:59:03.955465+00:00",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "path": "raw/002-page-600ed80828b8.html",
+      "issue_id": null
+    },
+    {
+      "id": "n00010",
+      "parents": [
+        "n00009"
+      ],
+      "stage": "save",
+      "stage_label": "Lưu dữ liệu",
+      "label": "parsed/unassessed-document-001.json",
+      "status": "success",
+      "at": "2026-10-07T08:59:04.121717+00:00",
+      "url": "",
+      "path": "parsed/unassessed-document-001.json",
+      "issue_id": null
+    },
+    {
+      "id": "n00011",
+      "parents": [
+        "n00009"
+      ],
+      "stage": "save",
+      "stage_label": "Lưu dữ liệu",
+      "label": "parsed/document-001.json",
+      "status": "success",
+      "at": "2026-10-07T08:59:04.123151+00:00",
+      "url": "",
+      "path": "parsed/document-001.json",
+      "issue_id": null
+    },
+    {
+      "id": "n00012",
+      "parents": [
+        "n00010",
+        "n00011"
+      ],
+      "stage": "save",
+      "stage_label": "Lưu dữ liệu",
+      "label": "crawl.sqlite",
+      "status": "success",
+      "at": "2026-10-07T08:59:04.124296+00:00",
+      "url": "",
+      "path": "crawl.sqlite",
+      "issue_id": null
+    },
+    {
+      "id": "import-1",
+      "parents": [],
+      "stage": "human-review",
+      "stage_label": "Đưa vào hàng chờ",
+      "label": "The Python Tutorial — Python 3.14.8 documentation",
+      "status": "success",
+      "at": "2026-10-07T08:59:04.171026+00:00",
+      "url": "https://docs.python.org/3/tutorial/index.html",
+      "document_id": "53a05f5671cd4550a0d89af9f00e0127",
+      "document_status": "pending"
+    }
+  ],
+  "issues": [],
+  "diagnosis": null,
+  "total_nodes": 12,
+  "message": "Trace từ lần ghi gần nhất; thời gian mỗi bước là thời điểm bắt đầu. Chỉ hiển thị tối đa 500 bước gần nhất."
+}

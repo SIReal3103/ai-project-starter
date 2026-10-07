@@ -2,6 +2,24 @@
 
 Repo chứa hướng dẫn BTC, script thử gateway và bộ báo cáo/template eval. Ứng dụng Crawl & RAG pipeline được phát triển trong [repo riêng](https://github.com/SIReal3103/crawl-rag-pipeline); thư mục `rag-review/` ở đây là bản mã lưu trước khi tách.
 
+## QA và eval mới nhất
+
+- [Template QA Apple-like và hướng dẫn agent](chatbot-eval-kit/qa-report/README.md): ca kiểm thử có bước thực hiện, kỳ vọng/thực tế, Đạt/Chưa đạt, bằng chứng, lỗi và kiểm lại; 14 chỉ số có cách đo và diễn giải.
+- [Lượt inference mới ngày 07/10/2026](chatbot-eval-kit/qa-report/evaluations/20261007-qwen-rerun/README.md): Qwen2.5-0.5B đạt 6/24 sau audit, 18 chưa đạt; Ragas/DeepEval offline chạy lại. Dữ liệu tổng hợp, context lưu sẵn; chưa có semantic judge hoặc agent executor.
+- [HTML mới](chatbot-eval-kit/qa-report/evaluations/20261007-qwen-rerun/report.html) và [PDF mới](chatbot-eval-kit/qa-report/evaluations/20261007-qwen-rerun/report.pdf). Tải HTML về rồi mở bằng trình duyệt; trang file trên GitHub hiển thị mã nguồn.
+- [Skill ai-qa-evals](skills/ai-qa-evals/SKILL.md) để giao việc chạy eval và báo cáo cho sản phẩm khác.
+
+### Cài skill cho Codex
+
+Sau khi clone repo này, mở terminal tại root `ai-project-starter` (macOS/Linux):
+
+```sh
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R skills/ai-qa-evals "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
+
+Nếu đã có skill cùng tên, đối chiếu rồi cập nhật nội dung thay vì chép lồng thư mục. Mở phiên Codex mới để nhận skill, rồi dùng: **`$ai-qa-evals Đánh giá sản phẩm này và xuất báo cáo QA tiếng Việt từ bằng chứng thật.`** Skill tự hướng dẫn clone bộ công cụ nếu workspace mới chưa có kit; không phụ thuộc file local của tác giả.
+
 ## Tài liệu
 
 | Nội dung | File |
@@ -21,7 +39,7 @@ Repo chứa hướng dẫn BTC, script thử gateway và bộ báo cáo/template
 | **Ứng dụng Crawl & RAG pipeline** | [Repo crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline) |
 | **Hướng dẫn trang Crawl & RAG pipeline** | [huong-dan-crawl-rag-pipeline.md](huong-dan-crawl-rag-pipeline.md) |
 
-Ba hướng dẫn BTC/techstack, script gateway và guide giao việc eval giữ nguyên nội dung nguồn. HTML/PDF và bốn JSON kết quả mẫu cũng giữ nguyên từ gói báo cáo đã cung cấp. Mã eval/setup giữ các sửa lỗi portability để chạy độc lập; ZIP chứa cùng bộ kit đang có trong repo.
+Ba hướng dẫn BTC/techstack và script gateway giữ nguyên nội dung nguồn. Báo cáo cũ trong `reports/` và bốn JSON trong `example-results/` được giữ để tham chiếu; báo cáo QA mới nằm trong `qa-report/`. ZIP chứa bộ kit hiện tại; skill nằm riêng trong `skills/` của repo.
 
 ## Skill thiết kế gameplay phiêu lưu AI
 

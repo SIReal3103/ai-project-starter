@@ -1,0 +1,60 @@
+{
+  "mode": "fts5",
+  "status": "ok",
+  "as_of": "2026-10-07",
+  "collection": "llm-eval",
+  "results": [
+    {
+      "document_id": "5dd38009db494671a7a8b1a8f7e1b444",
+      "title": "Giờ mở cửa",
+      "source_id": "eval-gio",
+      "document_version": "1",
+      "source_url": null,
+      "source_sha256": "de95b011ae69f2e63c58cce5771f92a4f731a4bebb54ba2f7e9fd619818c9b60",
+      "chunk_id": "cb6441873b042fdb331516c46",
+      "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc.",
+      "locator": {
+        "kind": "document_text",
+        "start": 0,
+        "end": 318
+      },
+      "score": 1.3993876287682427,
+      "factual_confidence": "human_reviewed_not_guaranteed"
+    },
+    {
+      "document_id": "06d194a851a748e8b32c479f2e24683a",
+      "title": "Mượn sách",
+      "source_id": "eval-muon",
+      "document_version": "1",
+      "source_url": null,
+      "source_sha256": "b6f93593ed920e6264ab2ff8940c9328e678642702ab049d7dc86d08cff82739",
+      "chunk_id": "cccfa6f9cc3821ace4bb3adca",
+      "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ.",
+      "locator": {
+        "kind": "document_text",
+        "start": 0,
+        "end": 317
+      },
+      "score": 6.978915228605544e-06,
+      "factual_confidence": "human_reviewed_not_guaranteed"
+    },
+    {
+      "document_id": "358c72ca80194c34b12e7ccbff5e88a1",
+      "title": "Làm thẻ",
+      "source_id": "eval-the",
+      "document_version": "1",
+      "source_url": null,
+      "source_sha256": "86d4d84ad038168d934e9fa179a3a1970b4f769002fe13ebcc1def1ae27516ad",
+      "chunk_id": "c8b3a9af21b2005c586463c00",
+      "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí.",
+      "locator": {
+        "kind": "document_text",
+        "start": 0,
+        "end": 320
+      },
+      "score": 5.946428571428571e-06,
+      "factual_confidence": "human_reviewed_not_guaranteed"
+    }
+  ],
+  "notice": "Điểm lexical ranking không phải độ tin cậy nội dung."
+}

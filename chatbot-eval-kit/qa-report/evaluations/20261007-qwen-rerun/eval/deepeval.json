@@ -1,0 +1,512 @@
+{
+  "framework": "deepeval",
+  "version": "4.2.8",
+  "mode": "offline",
+  "results": [
+    {
+      "case_id": "C01",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C01",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C02",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C02",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C03",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C03",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C04",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C04",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C05",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C05",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C05",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C06",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C06",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C06",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C07",
+      "metric": "exact_match",
+      "score": 1.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C07",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C07",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C08",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "C08",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C08",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R01",
+      "metric": "exact_match",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R01",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R02",
+      "metric": "exact_match",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R02",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R03",
+      "metric": "exact_match",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R03",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R04",
+      "metric": "exact_match",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R04",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R05",
+      "metric": "exact_match",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R05",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R05",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R06",
+      "metric": "exact_match",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R06",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R06",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R07",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "R07",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R07",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R08",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "R08",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R08",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G01",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "G01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G01",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G02",
+      "metric": "exact_match",
+      "score": 1.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "G02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G02",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G03",
+      "metric": "exact_match",
+      "score": 1.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "G03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G03",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G04",
+      "metric": "exact_match",
+      "score": 1.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "G04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G04",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J01",
+      "metric": "exact_match",
+      "score": 1.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "J01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J01",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J02",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "J02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J02",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J03",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "J03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J03",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J04",
+      "metric": "exact_match",
+      "score": 0.0,
+      "status": "scored",
+      "threshold": 1
+    },
+    {
+      "case_id": "J04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J04",
+      "metric": "geval_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    }
+  ],
+  "errors": []
+}

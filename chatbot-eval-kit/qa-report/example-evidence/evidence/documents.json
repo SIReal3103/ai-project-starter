@@ -1,0 +1,278 @@
+{
+  "gio": {
+    "title": "Giờ mở cửa",
+    "collection": "llm-eval",
+    "source_id": "eval-gio",
+    "document_version": "1",
+    "time_sensitive": false,
+    "effective_from": null,
+    "effective_to": null,
+    "id": "5dd38009db494671a7a8b1a8f7e1b444",
+    "source_kind": "text",
+    "filename": "text.txt",
+    "mime": "text/plain",
+    "source_url": null,
+    "source_sha256": "de95b011ae69f2e63c58cce5771f92a4f731a4bebb54ba2f7e9fd619818c9b60",
+    "status": "approved",
+    "revision": 2,
+    "created_at": "2026-10-07T08:59:01.044007+00:00",
+    "updated_at": "2026-10-07T08:59:01.423209+00:00",
+    "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc.",
+    "parser": "utf8-text",
+    "segments": [
+      {
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc.",
+        "locator": {
+          "kind": "document_text"
+        }
+      }
+    ],
+    "parser_warnings": [],
+    "partial": false,
+    "edited": false,
+    "chunker": "scope-data-bot/char-span-v1/400",
+    "upstream_commit": "cb37446a00c6283cbb596df524885cfcb08a9fe7",
+    "duplicate_of": null,
+    "audit": [
+      {
+        "action": "import",
+        "actor": "local-operator",
+        "note": "Nhập vào hàng chờ duyệt.",
+        "at": "2026-10-07T08:59:01.044007+00:00",
+        "revision": 1,
+        "source_sha256": "de95b011ae69f2e63c58cce5771f92a4f731a4bebb54ba2f7e9fd619818c9b60"
+      },
+      {
+        "action": "approve",
+        "actor": "Người vận hành bộ eval - dữ liệu tự tạo",
+        "note": "",
+        "at": "2026-10-07T08:59:01.423209+00:00",
+        "revision": 2,
+        "source_sha256": "de95b011ae69f2e63c58cce5771f92a4f731a4bebb54ba2f7e9fd619818c9b60",
+        "content_sha256": "de95b011ae69f2e63c58cce5771f92a4f731a4bebb54ba2f7e9fd619818c9b60",
+        "acknowledge_findings": true
+      }
+    ],
+    "chunks": [
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc.",
+        "locator": {
+          "kind": "document_text",
+          "start": 0,
+          "end": 318
+        },
+        "tokens": 159
+      }
+    ],
+    "quality": {
+      "score": 100,
+      "label": "Sẵn sàng để người duyệt kiểm",
+      "findings": [
+        {
+          "code": "source_verification",
+          "severity": "info",
+          "message": "Nguồn là bản tải lên; cần đối chiếu đơn vị phát hành và thẩm quyền nội dung.",
+          "penalty": 0,
+          "snippet": "",
+          "locator": {}
+        },
+        {
+          "code": "factual_review",
+          "severity": "info",
+          "message": "Chưa xác minh tính đúng của nội dung. Kiểm tra tự động chỉ phát hiện một số lỗi trích xuất và metadata.",
+          "penalty": 0,
+          "snippet": "",
+          "locator": {}
+        }
+      ],
+      "factual_confidence": "unverified",
+      "method": "extraction-rules-v1",
+      "explanation": "Điểm quy tắc 0–100, trừ theo cảnh báo đã liệt kê; chưa hiệu chỉnh và không phải xác suất đúng."
+    }
+  },
+  "muon": {
+    "title": "Mượn sách",
+    "collection": "llm-eval",
+    "source_id": "eval-muon",
+    "document_version": "1",
+    "time_sensitive": false,
+    "effective_from": null,
+    "effective_to": null,
+    "id": "06d194a851a748e8b32c479f2e24683a",
+    "source_kind": "text",
+    "filename": "text.txt",
+    "mime": "text/plain",
+    "source_url": null,
+    "source_sha256": "b6f93593ed920e6264ab2ff8940c9328e678642702ab049d7dc86d08cff82739",
+    "status": "approved",
+    "revision": 2,
+    "created_at": "2026-10-07T08:59:01.631498+00:00",
+    "updated_at": "2026-10-07T08:59:01.947537+00:00",
+    "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ.",
+    "parser": "utf8-text",
+    "segments": [
+      {
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ.",
+        "locator": {
+          "kind": "document_text"
+        }
+      }
+    ],
+    "parser_warnings": [],
+    "partial": false,
+    "edited": false,
+    "chunker": "scope-data-bot/char-span-v1/400",
+    "upstream_commit": "cb37446a00c6283cbb596df524885cfcb08a9fe7",
+    "duplicate_of": null,
+    "audit": [
+      {
+        "action": "import",
+        "actor": "local-operator",
+        "note": "Nhập vào hàng chờ duyệt.",
+        "at": "2026-10-07T08:59:01.631498+00:00",
+        "revision": 1,
+        "source_sha256": "b6f93593ed920e6264ab2ff8940c9328e678642702ab049d7dc86d08cff82739"
+      },
+      {
+        "action": "approve",
+        "actor": "Người vận hành bộ eval - dữ liệu tự tạo",
+        "note": "",
+        "at": "2026-10-07T08:59:01.947537+00:00",
+        "revision": 2,
+        "source_sha256": "b6f93593ed920e6264ab2ff8940c9328e678642702ab049d7dc86d08cff82739",
+        "content_sha256": "b6f93593ed920e6264ab2ff8940c9328e678642702ab049d7dc86d08cff82739",
+        "acknowledge_findings": true
+      }
+    ],
+    "chunks": [
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ.",
+        "locator": {
+          "kind": "document_text",
+          "start": 0,
+          "end": 317
+        },
+        "tokens": 145
+      }
+    ],
+    "quality": {
+      "score": 100,
+      "label": "Sẵn sàng để người duyệt kiểm",
+      "findings": [
+        {
+          "code": "source_verification",
+          "severity": "info",
+          "message": "Nguồn là bản tải lên; cần đối chiếu đơn vị phát hành và thẩm quyền nội dung.",
+          "penalty": 0,
+          "snippet": "",
+          "locator": {}
+        },
+        {
+          "code": "factual_review",
+          "severity": "info",
+          "message": "Chưa xác minh tính đúng của nội dung. Kiểm tra tự động chỉ phát hiện một số lỗi trích xuất và metadata.",
+          "penalty": 0,
+          "snippet": "",
+          "locator": {}
+        }
+      ],
+      "factual_confidence": "unverified",
+      "method": "extraction-rules-v1",
+      "explanation": "Điểm quy tắc 0–100, trừ theo cảnh báo đã liệt kê; chưa hiệu chỉnh và không phải xác suất đúng."
+    }
+  },
+  "the": {
+    "title": "Làm thẻ",
+    "collection": "llm-eval",
+    "source_id": "eval-the",
+    "document_version": "1",
+    "time_sensitive": false,
+    "effective_from": null,
+    "effective_to": null,
+    "id": "358c72ca80194c34b12e7ccbff5e88a1",
+    "source_kind": "text",
+    "filename": "text.txt",
+    "mime": "text/plain",
+    "source_url": null,
+    "source_sha256": "86d4d84ad038168d934e9fa179a3a1970b4f769002fe13ebcc1def1ae27516ad",
+    "status": "approved",
+    "revision": 2,
+    "created_at": "2026-10-07T08:59:02.096819+00:00",
+    "updated_at": "2026-10-07T08:59:02.357441+00:00",
+    "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí.",
+    "parser": "utf8-text",
+    "segments": [
+      {
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí.",
+        "locator": {
+          "kind": "document_text"
+        }
+      }
+    ],
+    "parser_warnings": [],
+    "partial": false,
+    "edited": false,
+    "chunker": "scope-data-bot/char-span-v1/400",
+    "upstream_commit": "cb37446a00c6283cbb596df524885cfcb08a9fe7",
+    "duplicate_of": null,
+    "audit": [
+      {
+        "action": "import",
+        "actor": "local-operator",
+        "note": "Nhập vào hàng chờ duyệt.",
+        "at": "2026-10-07T08:59:02.096819+00:00",
+        "revision": 1,
+        "source_sha256": "86d4d84ad038168d934e9fa179a3a1970b4f769002fe13ebcc1def1ae27516ad"
+      },
+      {
+        "action": "approve",
+        "actor": "Người vận hành bộ eval - dữ liệu tự tạo",
+        "note": "",
+        "at": "2026-10-07T08:59:02.357441+00:00",
+        "revision": 2,
+        "source_sha256": "86d4d84ad038168d934e9fa179a3a1970b4f769002fe13ebcc1def1ae27516ad",
+        "content_sha256": "86d4d84ad038168d934e9fa179a3a1970b4f769002fe13ebcc1def1ae27516ad",
+        "acknowledge_findings": true
+      }
+    ],
+    "chunks": [
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí.",
+        "locator": {
+          "kind": "document_text",
+          "start": 0,
+          "end": 320
+        },
+        "tokens": 155
+      }
+    ],
+    "quality": {
+      "score": 100,
+      "label": "Sẵn sàng để người duyệt kiểm",
+      "findings": [
+        {
+          "code": "source_verification",
+          "severity": "info",
+          "message": "Nguồn là bản tải lên; cần đối chiếu đơn vị phát hành và thẩm quyền nội dung.",
+          "penalty": 0,
+          "snippet": "",
+          "locator": {}
+        },
+        {
+          "code": "factual_review",
+          "severity": "info",
+          "message": "Chưa xác minh tính đúng của nội dung. Kiểm tra tự động chỉ phát hiện một số lỗi trích xuất và metadata.",
+          "penalty": 0,
+          "snippet": "",
+          "locator": {}
+        }
+      ],
+      "factual_confidence": "unverified",
+      "method": "extraction-rules-v1",
+      "explanation": "Điểm quy tắc 0–100, trừ theo cảnh báo đã liệt kê; chưa hiệu chỉnh và không phải xác suất đúng."
+    }
+  }
+}

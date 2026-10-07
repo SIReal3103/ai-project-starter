@@ -1,0 +1,12 @@
+{
+  "pipeline": {
+    "commit": "d80b255a4df74a6a31cb8f2808a36c4ca0acdb1c",
+    "branch": "main",
+    "tracked_changes": ""
+  },
+  "resources": {
+    "commit": "bf0640b2c73ec7abdb3a9aec0754c4fcbdf5bb8e",
+    "branch": "main",
+    "tracked_changes": ""
+  }
+}

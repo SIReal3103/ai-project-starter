@@ -1,0 +1,10 @@
+{
+  "baseline": "../../example-evidence/responses.json",
+  "new_run": "responses.json",
+  "outputs_identical": 24,
+  "total": 24,
+  "raw_passed": 7,
+  "audited_passed": 6,
+  "changed_model_or_prompt": false,
+  "inference_completed_at": "2026-10-07T16:57:47+0700"
+}

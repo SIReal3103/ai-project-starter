@@ -4,6 +4,15 @@
 
 Kit có runner chạy được, adapter API/chat, bộ chấm theo điều kiện, Ragas/DeepEval, LLM judge tùy chọn, bảng câu hỏi/đáp án/kết quả và biểu đồ. Đây là template thực hành; dữ liệu mẫu và trợ lý dùng luật không chứng minh chất lượng LLM của sản phẩm thật.
 
+## Mẫu nghiệm thu QA sản phẩm và AI
+
+Dùng [mẫu QA mới](qa-report/README.md) khi cần quyết định nghiệm thu: điều kiện kiểm, bước tái hiện, mong đợi/thực tế, **Đạt/Chưa đạt**, bằng chứng, lỗi và kiểm lại. Mỗi chỉ số LLM/RAG/agent có diễn giải, cách đo và ngưỡng đề xuất. Template chưa chạy giữ trống kết quả; báo cáo ví dụ dùng bằng chứng cũ được ghi rõ.
+
+- [Mở template HTML](qa-report/output/template.html) · [Ví dụ đã điền](qa-report/output/example.html)
+- [Hướng dẫn agent và prompt giao việc](qa-report/agent-guide.md)
+
+Từ thư mục `chatbot-eval-kit`: `python3 qa-report/render.py --input qa-report/template-data.json --output qa-report/output/template.html`.
+
 ## Chạy ngay
 
 Cần Python **3.12 trở lên**. Từ root repo, chạy `cd chatbot-eval-kit`; nếu sao chép riêng bộ kit, mở terminal ngay trong thư mục chứa `main.py`. Các lệnh bên dưới đều chạy tại thư mục đó. Trên Windows có thể dùng `python` hoặc `py -3.12` thay cho `python3`.

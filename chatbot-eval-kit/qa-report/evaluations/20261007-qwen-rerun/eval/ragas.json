@@ -1,0 +1,836 @@
+{
+  "framework": "ragas",
+  "version": "0.4.3",
+  "mode": "offline",
+  "results": [
+    {
+      "case_id": "C01",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C01",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C01",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C01",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C02",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C02",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C02",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C02",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C03",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C03",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C03",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C03",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C04",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C04",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C04",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C04",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C05",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C05",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C05",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C05",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C05",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C06",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C06",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C06",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C06",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C06",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C07",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C07",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C07",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C07",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C07",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C08",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C08",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "C08",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C08",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "C08",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R01",
+      "metric": "non_llm_context_recall",
+      "score": 1.0,
+      "status": "scored"
+    },
+    {
+      "case_id": "R01",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": 0.9999999999,
+      "status": "scored"
+    },
+    {
+      "case_id": "R01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R01",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R01",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R02",
+      "metric": "non_llm_context_recall",
+      "score": 1.0,
+      "status": "scored"
+    },
+    {
+      "case_id": "R02",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": 0.9999999999,
+      "status": "scored"
+    },
+    {
+      "case_id": "R02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R02",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R02",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R03",
+      "metric": "non_llm_context_recall",
+      "score": 1.0,
+      "status": "scored"
+    },
+    {
+      "case_id": "R03",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": 0.9999999999,
+      "status": "scored"
+    },
+    {
+      "case_id": "R03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R03",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R03",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R04",
+      "metric": "non_llm_context_recall",
+      "score": 1.0,
+      "status": "scored"
+    },
+    {
+      "case_id": "R04",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": 0.9999999999,
+      "status": "scored"
+    },
+    {
+      "case_id": "R04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R04",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R04",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R05",
+      "metric": "non_llm_context_recall",
+      "score": 1.0,
+      "status": "scored"
+    },
+    {
+      "case_id": "R05",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": 0.9999999999,
+      "status": "scored"
+    },
+    {
+      "case_id": "R05",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R05",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R05",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R06",
+      "metric": "non_llm_context_recall",
+      "score": 1.0,
+      "status": "scored"
+    },
+    {
+      "case_id": "R06",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": 0.9999999999,
+      "status": "scored"
+    },
+    {
+      "case_id": "R06",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R06",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R06",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R07",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R07",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R07",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R07",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R07",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R08",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R08",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "R08",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R08",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "R08",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G01",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G01",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G01",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G01",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G02",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G02",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G02",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G02",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G03",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G03",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G03",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G03",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G04",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G04",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "G04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G04",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "G04",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J01",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J01",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J01",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J01",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J01",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J02",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J02",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J02",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J02",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J02",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J03",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J03",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J03",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J03",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J03",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J04",
+      "metric": "non_llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J04",
+      "metric": "non_llm_context_precision_with_reference",
+      "score": null,
+      "status": "not_run",
+      "reason": "Not applicable: required case tag, reference, answer, or RAG contexts absent"
+    },
+    {
+      "case_id": "J04",
+      "metric": "faithfulness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J04",
+      "metric": "factual_correctness",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    },
+    {
+      "case_id": "J04",
+      "metric": "llm_context_recall",
+      "score": null,
+      "status": "not_run",
+      "reason": "LLM judge disabled; use --with-judge and explicit judge settings"
+    }
+  ],
+  "errors": []
+}

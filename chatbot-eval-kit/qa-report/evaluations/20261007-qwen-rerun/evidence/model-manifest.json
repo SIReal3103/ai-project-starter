@@ -1,0 +1,16 @@
+{
+  "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+  "model_revision": "53a32aee5e9447773fd2b85988395066aef3700a",
+  "temperature": 0,
+  "max_tokens": 192,
+  "load_seconds": 0.9589715842157602,
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "versions": {
+    "mlx": "0.32.3",
+    "mlx-lm": "0.32.0",
+    "transformers": "5.19.0",
+    "huggingface-hub": "1.33.0"
+  },
+  "completed_at": "2026-10-07T16:57:47+0700"
+}

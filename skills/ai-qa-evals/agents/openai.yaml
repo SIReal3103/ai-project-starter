@@ -1,0 +1,4 @@
+interface:
+  display_name: "QA & Evals AI"
+  short_description: "Chạy eval AI và xuất báo cáo nghiệm thu QA tiếng Việt"
+  default_prompt: "Dùng $ai-qa-evals để đánh giá sản phẩm này với dữ liệu và bằng chứng thật, rồi xuất báo cáo QA HTML/PDF tiếng Việt."

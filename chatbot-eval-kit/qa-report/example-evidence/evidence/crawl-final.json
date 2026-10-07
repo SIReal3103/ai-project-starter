@@ -1,0 +1,23 @@
+{
+  "id": "8f218a2669404a54bd00bbaef4955c25",
+  "action": "crawl",
+  "collection": "crawl-live",
+  "scope": "Python language official documentation quick start",
+  "created_at": "2026-10-07T08:59:02.825848+00:00",
+  "status": "needs_review",
+  "document_ids": [
+    "53a05f5671cd4550a0d89af9f00e0127"
+  ],
+  "errors": [],
+  "seed_urls": [
+    "https://docs.python.org/3/tutorial/index.html"
+  ],
+  "max_sources": 1,
+  "max_pages": 1,
+  "max_depth": 0,
+  "crawl_summary": "Tìm 1 nguồn; xử lý 1 URL; 0 bảng kiểm chứng theo nguồn, 0 dòng; 1 tài liệu chờ kiểm tra, 0 URL lỗi. Không coi các nguồn lỗi hoặc review là dữ liệu đã xác minh.",
+  "crawl_counts": {
+    "review": 1
+  },
+  "finished_at": "2026-10-07T08:59:04.441814+00:00"
+}

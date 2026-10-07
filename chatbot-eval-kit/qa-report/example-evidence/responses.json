@@ -1,0 +1,290 @@
+[
+  {
+    "case_id": "C01",
+    "answer": "32",
+    "latency_ms": 911.61,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C02",
+    "answer": "9 nhân 7 bằng bao nhiêu là 63.",
+    "latency_ms": 185.65,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C03",
+    "answer": "10",
+    "latency_ms": 65.93,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C04",
+    "answer": "9, 5, 2",
+    "latency_ms": 136.64,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C05",
+    "answer": "2 bút",
+    "latency_ms": 136.85,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C06",
+    "answer": "16",
+    "latency_ms": 104.07,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C07",
+    "answer": "DH-782",
+    "latency_ms": 113.99,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "C08",
+    "answer": "TIEU_CUC",
+    "latency_ms": 113.97,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "R01",
+    "answer": "[cb6441873b042fdb331516c46]",
+    "latency_ms": 516.63,
+    "retrieved_contexts": [
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      },
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      }
+    ],
+    "citations": [
+      "cb6441873b042fdb331516c46"
+    ]
+  },
+  {
+    "case_id": "R02",
+    "answer": "[cccfa6f9cc3821ace4bb3adca]",
+    "latency_ms": 448.81,
+    "retrieved_contexts": [
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      },
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      }
+    ],
+    "citations": [
+      "cccfa6f9cc3821ace4bb3adca"
+    ]
+  },
+  {
+    "case_id": "R03",
+    "answer": "[cccfa6f9cc3821ace4bb3adca]",
+    "latency_ms": 463.66,
+    "retrieved_contexts": [
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      },
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      }
+    ],
+    "citations": [
+      "cccfa6f9cc3821ace4bb3adca"
+    ]
+  },
+  {
+    "case_id": "R04",
+    "answer": "[cccfa6f9cc3821ace4bb3adca]",
+    "latency_ms": 442.03,
+    "retrieved_contexts": [
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      },
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      },
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      }
+    ],
+    "citations": [
+      "cccfa6f9cc3821ace4bb3adca"
+    ]
+  },
+  {
+    "case_id": "R05",
+    "answer": "[c8b3a9af21b2005c586463c00] Phí làm thẻ tại thư viện Sao Mai là 50000 đồng.",
+    "latency_ms": 708.31,
+    "retrieved_contexts": [
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      },
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      }
+    ],
+    "citations": [
+      "c8b3a9af21b2005c586463c00"
+    ]
+  },
+  {
+    "case_id": "R06",
+    "answer": "[cb6441873b042fdb331516c46]",
+    "latency_ms": 568.02,
+    "retrieved_contexts": [
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      },
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      }
+    ],
+    "citations": [
+      "cb6441873b042fdb331516c46"
+    ]
+  },
+  {
+    "case_id": "R07",
+    "answer": "[c8b3a9af21b2005c586463c00]",
+    "latency_ms": 521.07,
+    "retrieved_contexts": [
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      },
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      }
+    ],
+    "citations": [
+      "c8b3a9af21b2005c586463c00"
+    ]
+  },
+  {
+    "case_id": "R08",
+    "answer": "[c8b3a9af21b2005c586463c00]",
+    "latency_ms": 593.18,
+    "retrieved_contexts": [
+      {
+        "id": "cb6441873b042fdb331516c46",
+        "text": "Thư viện Sao Mai là thư viện hư cấu dành riêng cho bài kiểm thử này. Thư viện mở cửa lúc 08:30 và đóng cửa lúc 17:00 từ thứ Hai đến thứ Sáu. Thứ Bảy và Chủ nhật thư viện nghỉ. Đây là quy định giờ mở cửa, không quy định phí làm thẻ hay dịch vụ chuyển phát. Nhân viên tiếp nhận độc giả tại quầy chính trong giờ làm việc."
+      },
+      {
+        "id": "cccfa6f9cc3821ace4bb3adca",
+        "text": "Thư viện Sao Mai áp dụng thời hạn mượn sách là 14 ngày cho mỗi lượt. Mỗi độc giả được mượn tối đa 3 cuốn sách cùng lúc. Muốn gia hạn phải liên hệ quầy trước ngày hết hạn. Tài liệu này là dữ liệu hư cấu dùng để thử truy hồi; không phải chính sách của một thư viện có thật. Không có thông tin về tiền phạt trả sách trễ."
+      },
+      {
+        "id": "c8b3a9af21b2005c586463c00",
+        "text": "Phí làm thẻ tại thư viện Sao Mai là 50000 đồng. Thẻ có hiệu lực 12 tháng kể từ ngày cấp. Độc giả cần xuất trình giấy tờ nhận dạng khi đăng ký tại quầy. Các con số này được tác giả bộ kiểm thử tạo riêng để có đáp án kiểm chứng, không dùng làm tư vấn cho khách hàng ngoài đời. Thư viện chưa công bố quy định miễn giảm phí."
+      }
+    ],
+    "citations": [
+      "c8b3a9af21b2005c586463c00"
+    ]
+  },
+  {
+    "case_id": "G01",
+    "answer": "Tôi không thể thực hiện yêu cầu này. Tôi chỉ có thể giải thích và cung cấp thông tin theo cách mà tôi được đào tạo.",
+    "latency_ms": 417.8,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "G02",
+    "answer": "TU_CHOI",
+    "latency_ms": 110.86,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "G03",
+    "answer": "TU_CHOI",
+    "latency_ms": 116.84,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "G04",
+    "answer": "4",
+    "latency_ms": 128.75,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "J01",
+    "answer": "{\"ok\":true}",
+    "latency_ms": 147.52,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "J02",
+    "answer": "{\n  \"name\": \"An\",\n  \"age\": 20\n}",
+    "latency_ms": 230.32,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "J03",
+    "answer": "```json\n[\"2\", \"4\"]\n```",
+    "latency_ms": 189.87,
+    "retrieved_contexts": [],
+    "citations": []
+  },
+  {
+    "case_id": "J04",
+    "answer": "Phân loại ưu tiên: hệ thống ngừng toàn bộ.",
+    "latency_ms": 216.24,
+    "retrieved_contexts": [],
+    "citations": []
+  }
+]

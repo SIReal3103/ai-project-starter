@@ -1,5 +1,7 @@
 # Hướng dẫn dùng lại bộ eval chatbot, agent và guardrail
 
+Để viết báo cáo nghiệm thu QA có bước kiểm, mong đợi/thực tế và kết luận rõ ràng, dùng [hướng dẫn mẫu QA](qa-report/agent-guide.md). Các bước dưới đây vẫn hướng dẫn chạy evaluator; điểm đo không tự là phê duyệt nghiệm thu.
+
 Đây là bộ khung chạy được: chuẩn hóa ca kiểm thử, gọi adapter, chấm điều kiện, chạy Ragas/DeepEval khi có môi trường phù hợp và xuất báo cáo HTML. Bộ mẫu có **40 ca tiếng Việt: 12 chatbot, 8 RAG, 8 agent và 12 guardrail**. Tài liệu thư viện và đáp án mẫu được soạn thủ công; assistant demo dùng luật xác định, không gọi LLM. Kết quả demo chỉ minh họa quy trình và các giới hạn đã ghi, không phải chứng nhận chất lượng sản phẩm.
 
 ## 1. Chạy mẫu và đọc kết quả
