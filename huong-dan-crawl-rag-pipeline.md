@@ -2,20 +2,83 @@
 
 Hướng dẫn sử dụng trang **Crawl & RAG pipeline** của ứng dụng Human Mind, đối chiếu giao diện và mã ứng dụng ngày 07/10/2026. Địa chỉ mặc định khi ứng dụng đang chạy trên máy của bạn: **http://localhost:8765/#pipeline**.
 
-## Cài ứng dụng trước khi mở trang
+## 0. Clone, cài đặt và mở ứng dụng
 
-Repo ứng dụng: [SIReal3103/crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline). Cần Git, Python 3.12 có venv/pip và Bash; Windows dùng terminal WSL. Mở terminal tại thư mục muốn chứa project:
+### Chọn đúng repo và terminal
+
+| Bạn cần gì? | Repo cần dùng |
+| --- | --- |
+| Chạy giao diện Crawl & RAG pipeline | [SIReal3103/crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline) |
+| Hướng dẫn BTC, báo cáo mẫu và bộ eval | [SIReal3103/ai-project-starter](https://github.com/SIReal3103/ai-project-starter) |
+
+Để chạy pipeline, chỉ cần clone **crawl-rag-pipeline**. Không chạy script trong repo tài liệu hoặc thư mục `chatbot-eval-kit`.
+
+Chuẩn bị **Git, Python 3.12 có venv/pip, Bash và mạng lúc cài lần đầu**. macOS/Linux mở Terminal. Windows mở terminal **WSL Ubuntu**, thực hiện cả clone, cài và chạy trong WSL; các lệnh Bash dưới đây không dành cho PowerShell/CMD. Bản đóng gói đã được thử trên macOS; WSL chưa được nghiệm thu trực tiếp.
+
+Kiểm công cụ:
+
+```bash
+git --version
+python3.12 --version
+```
+
+Nếu thiếu công cụ, cài Git/Python 3.12 trước. Nếu Python 3.12 trên máy có tên `python3`, kiểm `python3 --version`, rồi thay lệnh setup bên dưới bằng `PYTHON_BIN=python3 bash setup.sh`.
+
+### Lần đầu: clone và cài
+
+Mở terminal tại thư mục bạn muốn lưu project. Chạy lần lượt; nếu một lệnh lỗi, xử lý lỗi trước khi chạy lệnh tiếp theo:
 
 ```bash
 git clone https://github.com/SIReal3103/crawl-rag-pipeline.git
 cd crawl-rag-pipeline
 bash setup.sh
+```
+
+Sau `cd`, terminal phải đang ở thư mục **crawl-rag-pipeline**, có các file `app.py`, `setup.sh` và `run.sh`. Có thể kiểm bằng `pwd` và `ls`. Nếu đã clone repo trước đó, vào thư mục đó thay vì chạy `git clone` lần nữa.
+
+Setup tự tạo `.venv`, cài dependency theo lockfile, tải tokenizer và clone parser/chunker đúng phiên bản vào `.runtime/scope-data-bot`. Không cần clone upstream bằng tay, cài Node hoặc cung cấp key AI để mở giao diện.
+
+### Khởi động và mở trình duyệt
+
+Vẫn trong thư mục **crawl-rag-pipeline**:
+
+```bash
 bash run.sh
 ```
 
-Hai script chạy **trong thư mục `crawl-rag-pipeline` vừa clone**. Setup tự cài dependency và upstream; không cần repo hoặc runtime trên máy người khác. Giữ terminal server mở, rồi truy cập **http://127.0.0.1:8765/#pipeline** trên cùng máy. Nếu cổng bận, dùng `RAG_REVIEW_PORT=8766 bash run.sh` và mở cổng 8766. Dừng bằng Ctrl+C. Lần sau vào lại thư mục project và chạy `bash run.sh`.
+Đợi terminal báo Uvicorn đang chạy, giữ terminal mở và truy cập **http://127.0.0.1:8765/#pipeline** bằng trình duyệt trên cùng máy. GitHub chỉ chứa mã nguồn; địa chỉ localhost chỉ hoạt động sau khi bạn chạy server.
 
-[README ứng dụng](https://github.com/SIReal3103/crawl-rag-pipeline#readme) có cách kiểm Python, xử lý lỗi cài đặt, cập nhật và cấu hình. Clone repo hướng dẫn hoặc bấm link localhost khi server chưa chạy sẽ không mở được ứng dụng.
+Nếu cổng 8765 đang bận, dùng:
+
+```bash
+RAG_REVIEW_PORT=8766 bash run.sh
+```
+
+Khi đó mở **http://127.0.0.1:8766/#pipeline**. Đổi cổng không tạo kho dữ liệu mới. Bản cài mới ban đầu chưa có tài liệu và không chứa key hoặc phiên chạy từ máy tác giả.
+
+### Dừng, mở lại và cập nhật
+
+- **Dừng:** nhấn Ctrl+C trong terminal chạy server.
+- **Mở lại:** mở terminal trong thư mục project, chạy `bash run.sh`; không cần clone hoặc setup lại mỗi lần.
+- **Cập nhật:** dừng server, vào đúng thư mục project rồi chạy:
+
+```bash
+git remote get-url origin
+git pull --ff-only
+bash setup.sh
+bash run.sh
+```
+
+Lệnh đầu phải hiện repo `SIReal3103/crawl-rag-pipeline` (HTTPS hoặc SSH). Nếu Git báo thay đổi local/xung đột, giữ các thay đổi đó để xử lý; không dùng reset hoặc xóa thư mục để ép cập nhật. Nếu đã đổi cổng, dùng lại lệnh khởi động với cổng đã chọn.
+
+Dữ liệu nằm ngoài source theo cấu hình ứng dụng; giữ nguyên vị trí project và `RAG_REVIEW_DATA` nếu đã đặt. Khi chuyển thư mục/máy, xem phần lưu trữ trong [README ứng dụng](https://github.com/SIReal3103/crawl-rag-pipeline#readme) để sao lưu và chọn lại kho dữ liệu.
+
+### Kiểm sau khi mở trang
+
+1. Thấy mục **Crawl & RAG pipeline**, biểu mẫu phiên mới và không có lỗi mất kết nối.
+2. Chạy thử với URL nguồn công khai của bạn, **1 trang, độ sâu 0**, rồi kiểm tài liệu vào hàng chờ.
+3. Duyệt và thử tìm từ khóa local trước. Hai bước này không cần key AI.
+4. Khi cần semantic RAG, lưu key đúng provider trong **Cấu hình API key**, rồi tạo index và lấy evidence. Các bước này gọi API và có thể tính phí; mở được giao diện chưa chứng minh key hợp lệ.
 
 ## Luồng cần hoàn thành
 
@@ -88,7 +151,7 @@ Dùng **Tra cứu từ khóa không dùng key →**, kiểm đúng bộ tài li�
 
 | Hiện tượng | Xử lý |
 | --- | --- |
-| Trang không mở được | Kiểm ứng dụng đã chạy trên đúng máy/cổng; chạy ứng dụng theo README ứng dụng |
+| Trang không mở được | Kiểm terminal còn chạy `bash run.sh`, đúng cổng và đúng máy; xem lỗi startup trong terminal |
 | Crawl không có tài liệu | Đọc trace, dùng URL bài/PDF cụ thể, thử 1 trang và độ sâu 0 |
 | DuckDuckGo HTTP 202/challenge | Chuyển sang URL trực tiếp; không đổi key AI hoặc tìm cách vượt challenge |
 | Tài liệu bị chặn duyệt | Kiểm bản gốc, lỗi parse/thiếu nội dung/metadata; sửa hoặc nhập lại nguồn đầy đủ |

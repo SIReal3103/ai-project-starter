@@ -1,6 +1,6 @@
 # Hướng dẫn BTC và bộ báo cáo/eval
 
-Repo để chung các hướng dẫn được cung cấp, script thử gateway, trọn bộ báo cáo/template eval và ứng dụng Crawl & RAG pipeline. Không có scaffolder hoặc bộ hướng dẫn khởi tạo dự án được viết lại.
+Repo chứa hướng dẫn BTC, script thử gateway và bộ báo cáo/template eval. Ứng dụng Crawl & RAG pipeline được phát triển trong [repo riêng](https://github.com/SIReal3103/crawl-rag-pipeline); thư mục `rag-review/` ở đây là bản mã lưu trước khi tách.
 
 ## Tài liệu
 
@@ -23,17 +23,18 @@ Ba hướng dẫn BTC/techstack, script gateway và guide giao việc eval giữ
 
 ## Chạy lại bộ eval
 
-Core cần Python 3.12+, không cần key hay package bên ngoài:
+Core cần Python 3.12+, không cần key hay package bên ngoài. Lần đầu, mở terminal tại nơi muốn lưu repo và chạy:
 
 ```sh
-cd chatbot-eval-kit
+git clone https://github.com/SIReal3103/ai-project-starter.git
+cd ai-project-starter/chatbot-eval-kit
 python3 main.py validate
 python3 main.py self-test
 python3 main.py demo --frameworks off --out runs/demo-01
 python3 report.py --input runs/demo-01/results.json --output reports/demo-01.html
 ```
 
-Đổi tên thư mục output ở lượt tiếp theo. Trên Windows dùng `python` nếu không có lệnh `python3`. Ragas/DeepEval và xuất PDF tự động cần cài dependency theo README của kit. LLM judge live cần endpoint/model/key và ngân sách riêng.
+Nếu đã clone, mở terminal trong `ai-project-starter/chatbot-eval-kit` và bắt đầu từ lệnh `python3 main.py validate`. Đổi tên thư mục output ở lượt tiếp theo. Trên Windows dùng `python` nếu không có lệnh `python3`. Ragas/DeepEval và xuất PDF tự động cần cài dependency theo README của kit. LLM judge live cần endpoint/model/key và ngân sách riêng.
 
 Báo cáo có sẵn là **mẫu tổng hợp**, không phải kết luận chất lượng của sản phẩm mới. Cấu hình model, endpoint và quota trong hướng dẫn gốc cần được xác nhận tại thời điểm sử dụng; lượt đóng gói này không gọi gateway hay provider.
 
@@ -51,3 +52,5 @@ bash run.sh
 Giữ terminal mở và truy cập **http://127.0.0.1:8765/#pipeline** trên cùng máy. Xem [README ứng dụng](https://github.com/SIReal3103/crawl-rag-pipeline#readme) để cài điều kiện cần, đổi cổng, cập nhật và xử lý lỗi.
 
 Thư mục `rag-review/` ở repo tài liệu là bản mã đi kèm trước khi tách. Để cài mới hoặc cập nhật ứng dụng, dùng repo `crawl-rag-pipeline` ở trên. Bộ báo cáo/eval tiếp tục nằm trong repo tài liệu này.
+
+Hướng dẫn từng bước, bao gồm kiểm công cụ, dừng/mở lại, cập nhật và kiểm lần đầu: [Cài và sử dụng pipeline](huong-dan-crawl-rag-pipeline.md#0-clone-cài-đặt-và-mở-ứng-dụng).

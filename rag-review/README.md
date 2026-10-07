@@ -1,5 +1,7 @@
 # Human Mind — Duyệt tài liệu RAG
 
+> Đây là bản mã lưu trước khi tách repo. Để cài mới hoặc cập nhật ứng dụng, dùng [crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline) và [hướng dẫn hiện hành](../huong-dan-crawl-rag-pipeline.md).
+
 Trang quản trị local cho luồng **nhập nguồn → kiểm sơ bộ → người duyệt → kho tri thức**. FastAPI + SQLite FTS5 + giao diện web tiếng Việt. Tích hợp parser và chunker thật từ [scope-data-bot](https://github.com/Qyroven/scope-data-bot) tại commit `cb37446a00c6283cbb596df524885cfcb08a9fe7`.
 
 ## Clone, cài và chạy trên máy của bạn
