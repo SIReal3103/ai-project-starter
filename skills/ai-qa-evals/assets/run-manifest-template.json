@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "run_id": null,
+  "mode": null,
+  "target": {
+    "repository": null,
+    "commit": null,
+    "environment": null,
+    "endpoint_redacted": null
+  },
+  "data": {
+    "origin": null,
+    "dataset_version": null,
+    "dataset_sha256": null,
+    "reference_version": null
+  },
+  "budget": {
+    "wall_seconds": null,
+    "max_requests": null,
+    "max_tokens": null,
+    "max_cost": null,
+    "currency": null,
+    "max_concurrency": null
+  },
+  "scope": [
+    {
+      "group": "software",
+      "applicable": null,
+      "reason": null,
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "group": "llm_rag_agent",
+      "applicable": null,
+      "reason": null,
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "group": "performance",
+      "applicable": null,
+      "reason": null,
+      "status": "not_run",
+      "evidence": []
+    },
+    {
+      "group": "security_privacy",
+      "applicable": null,
+      "reason": null,
+      "status": "not_run",
+      "evidence": []
+    }
+  ],
+  "tools": [],
+  "measurements": [],
+  "cases": [],
+  "limitations": [],
+  "approval": {
+    "by": null,
+    "at": null,
+    "thresholds_approved": false
+  }
+}

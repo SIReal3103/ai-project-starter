@@ -1,6 +1,6 @@
 ---
 name: ai-qa-metrics
-description: Chọn chỉ số nghiệm thu sản phẩm AI, định nghĩa cách đo và lập bảng QA chi tiết với giá trị từng cột. Dùng khi cần đặc tả phép đo, rubric và nội dung báo cáo chatbot, RAG hoặc agent; không tự chạy eval hay công bố kết quả khi chỉ được yêu cầu lập mẫu.
+description: Chọn chỉ số test phần mềm, eval AI, thời gian phản hồi, tải, bảo mật và quyền riêng tư; định nghĩa cách đo và bảng QA với giá trị từng cột. Dùng khi cần đặc tả phép đo, rubric và nội dung báo cáo chatbot, RAG hoặc agent; không tự chạy eval hay công bố kết quả khi chỉ được yêu cầu lập mẫu.
 ---
 
 # Chỉ số và bảng QA nghiệm thu sản phẩm AI
@@ -44,6 +44,36 @@ Ngưỡng là hợp đồng sản phẩm, không là mặc định của Ragas/D
 | M15 — Chi phí theo tác vụ, khi có dữ liệu | Usage token, lượt retry/judge, giá đã xác minh hoặc hóa đơn | Tính theo từng loại input/output/cache và giá tương ứng; cộng retry. Tách chi phí sản phẩm và chi phí evaluator. Tổng chi phí/tác vụ thử, thêm chi phí/tác vụ thành công nếu cần. | Ghi tiền tệ, thời điểm giá và phần chưa tính. Không có giá/usage thì null, không điền 0. Chỉ thêm metric này khi schema báo cáo hỗ trợ. |
 
 Với ca QA chức năng thông thường (upload, CRUD, tìm kiếm, auth, crawl), kiểm contract, dữ liệu/state và luồng người dùng; không cần LLM judge. Unit/coverage/lint là bằng chứng kỹ thuật riêng, không là điểm đúng nội dung của chatbot.
+
+## 2a. Test phần mềm, hiệu năng, bảo mật và quyền riêng tư
+
+M01–M15 không bao phủ hết nghiệm thu phần mềm. Xét thêm các chỉ số dưới đây theo tính năng. Không suy ra “Không áp dụng” chỉ vì chưa cài tool. Mỗi số đo giữ đơn vị, mẫu số, công cụ/version, workload/scope và evidence như các metric AI.
+
+| Mã / Chỉ số | Cách đo, dữ liệu và công cụ | Cách kết luận / giới hạn |
+| --- | --- | --- |
+| M16 — Unit/integration/API/E2E | Vitest hoặc pytest/unittest, Playwright theo stack; pass/(pass+fail) theo từng suite. Báo collection errors, skips, xfail/xpass, aborted riêng. Với API kiểm cả schema/giá trị/state. | Zero tests hoặc suite không chạy là thiếu bằng chứng; UI đẹp/HTTP 200 chưa là chức năng đúng. |
+| M17 — Line/branch coverage | Vitest coverage hoặc coverage.py; dòng/nhánh được chạy trên tổng dòng/nhánh thuộc source scope. Lưu include/exclude và uncovered files. | Tách line, branch và requirement coverage. Không biến coverage thành accuracy của LLM. |
+| M18 — Phủ yêu cầu và regression | Số yêu cầu có ít nhất một ca đã chấm/tổng yêu cầu trong scope; bảng requirement→case→evidence. So baseline/candidate: pass→fail và fail→pass. | Có ca liên kết chưa chắc phủ hết yêu cầu; số lỗi regression là chỉ số riêng, không sửa expected để che lỗi. |
+| M19 — Flaky test | Trong tập test được chạy lặp có kiểm soát: test có cả pass và fail/số test được lặp; ghi số lượt/seed/version. | Retry pass không xóa fail ban đầu. Tách hạ tầng, dữ liệu không cô lập và bất định model; không lấy lượt tốt nhất. |
+| M20 — UI/accessibility | Playwright + axe; số violation theo rule/severity/page/state và các ca keyboard/focus/screen reader. | Không cộng node count thành tỷ lệ tuân thủ luật. Automated scan chỉ thấy state đã mở, không chứng nhận accessibility toàn app. |
+| M21 — E2E p50/p95/p99 và SLA | Timestamp đơn điệu từ client gửi đến nhận kết quả hoàn tất; nearest-rank ceil(p*n). Thêm số request thành công trong deadline/tổng request thử nếu có SLA. | Báo sample/time window, lỗi/timeout riêng; p99 ở n nhỏ không đại diện đuôi dài. Phân biệt inference, API và UI. |
+| M22 — TTFT và streaming | Timestamp gửi và token nội dung đầu tiên của SSE/WebSocket; thêm thời gian gap giữa các delta và output token/s. Token/s cần token count thật, không nhầm chunk với token. | TTFB có thể chỉ là header/heartbeat; không thay TTFT. Nêu server hay client timing, buffered proxy và phản hồi rỗng. |
+| M23 — Tải/concurrency/throughput | k6 hoặc harness: achieved RPS, số phiên đồng thời, completed/failed requests theo thời gian, p95 theo mức tải, queue wait. Tách cold/warm/cache hit. | VU không bằng RPS; tải GET health không đại diện chatbot có inference. Ghi số request, token/input length và chi phí. |
+| M24 — Error/timeout và tính sẵn sàng | HTTP/parse/provider/contract errors và timeouts chia tổng attempts; thêm tỷ lệ user task thành công trên tổng task, tách retry. | Không đếm retry thành nhiều tác vụ người dùng. Mẫu load ngắn không chứng minh uptime cả tháng. |
+| M25 — Hủy/khôi phục và tài nguyên | Fault test có kiểm soát; cancel-to-stop, số tác động sau cancel, thời gian phục hồi, CPU/RAM/queue peak; trước/sau cùng workload. | Cancel request không hoàn tác write đã commit. Không kết luận leak RAM chỉ từ một snapshot; ghi tool/process/version. |
+| M26 — Secret trong code/history/artifacts | Gitleaks; số finding được xác minh theo vị trí, loại và phạm vi scan. Dùng report đã redact, không chép secret vào QA. | 0 finding không chứng minh không có secret. Nếu có credential thật: owner thu hồi/rotate, không chỉ xóa dòng. |
+| M27 — Dependency/SAST/container findings | npm audit/pip-audit; Semgrep/Bandit; Trivy khi có image/IaC. Đếm unique finding theo severity, reachability và trạng thái triage, lưu advisory DB/rules/date. | Scanner findings chưa tự là exploit; xác minh bề mặt/thực thi. Không chạy auto-fix phá lock hoặc hạ severity để đạt gate. |
+| M28 — Web/API security | OWASP ZAP theo phạm vi; ca XSS/SQLi/SSRF/upload/session/CSRF/CORS ứng với route thật. Lưu request khử secret, response, state và tái hiện. | Passive scan không chứng minh đã kiểm auth hay active attack. Không active-scan/đẩy tải ra hệ thống ngoài scope. |
+| M29 — Auth/RBAC/tenant isolation | Ma trận actor A/B, role, object và read/write/export/cache; vi phạm quyền/số probe đã chấm, kèm số probe thiếu. | Phải kiểm backend và state, không chỉ ẩn nút UI. 403 đúng nhưng state đã đổi vẫn fail. |
+| M30 — Lộ dữ liệu và redaction | Canary/PII tổng hợp theo loại; quan sát output, stream, tool, logs, traces, export. Leak = số ca rò/số ca probe chấm được; redaction TP/FN/FP với nhãn độc lập. | Không nhận diện một chuỗi không chứng minh bảo vệ tất cả PII, đặc biệt tiếng Việt; không dùng dữ liệu nhạy cảm thật để tạo cuộc tấn công mẫu. |
+| M31 — Xóa/retention/consent | Case source→chunk/vector/cache/history/export/log/backup theo chính sách; số luồng đạt/tổng luồng kiểm, thời gian tới khi không truy cập được. Thử từ chối/rút/refresh consent nếu có. | Soft-delete UI chưa chứng minh xóa vật lý hoặc backup. Nêu giới hạn backup/provider và mốc retention thực; không tự kết luận tuân thủ pháp luật. |
+| M32 — STT/OCR/TTS/media khi áp dụng | WER=(S+D+I)/N theo chuẩn tokenization; field accuracy cho OCR/slot voice; ffprobe/FFmpeg và xem/nghe cho output media; rubric người chấm cho TTS. | Codec/duration đúng chưa chứng minh nghĩa đúng. Không có nhãn/reference thì chưa có WER/field accuracy. |
+| M33 — Judge agreement và độ ổn định | Ca judge đồng ý nhãn người/số ca calibration; báo bất đồng theo loại lỗi, invalid/timeout. So phiên bản prompt/judge trên tập cố định. | Agreement không đủ nếu cả hai lệch rubric; dùng mẫu khó và phân bố thật, không chỉ ca dễ. Không tự đặt điểm semantic khi thiếu judge. |
+| M34 — Hội thoại nhiều lượt | Tỷ lệ session đạt tất cả invariant bắt buộc; chấm riêng giữ context, cập nhật thông tin user sửa, tách user/session, hỏi lại và tác động cuối. | Turn-pass trung bình có thể che một lượt phá quyền hoặc sai tác vụ. Không đưa history chứa expected đáp án vào target. |
+
+**Trạng thái công cụ khác kết quả sản phẩm:** lưu đã cài/đã chạy/lỗi, version, command, exit, elapsed; kết quả ca và metric riêng. N/A cần lý do chức năng không có, blocked cần điều kiện còn thiếu; mock luôn có nhãn ở nguồn dữ liệu và báo cáo, không cộng vào điểm thật.
+
+**Cổng nghiệm thu:** tách chức năng, AI, thời gian/tải, quyền/bảo mật, dữ liệu và vận hành. Khi có một gate bắt buộc chưa đạt, không lấy score trung bình cao của nhóm khác để bù. Điều kiện đề xuất và điều kiện được phê duyệt là hai trạng thái khác nhau.
 
 ## 3. Cách chạy evaluator mà không nhầm ý nghĩa
 
@@ -125,6 +155,7 @@ Bảng lỗi: `Mã lỗi | Vấn đề & ảnh hưởng | Mong đợi/Thực t�
 
 ## 6. Bàn giao báo cáo
 
+- Thêm ma trận độ phủ phạm vi: test phần mềm, AI eval, thời gian/tải, bảo mật và quyền riêng tư; mỗi nhóm có đã chạy/chưa chạy/không áp dụng cùng lý do. Các bảng metric chọn từ M01–M34, không bắt buộc đo tất cả nếu sản phẩm không có tính năng.
 - Kết luận chỉ trong phạm vi đã kiểm: đã đo gì, ca nào chưa đạt, phần nào chưa kết luận và điều kiện còn thiếu để nghiệm thu. Không tự ký phê duyệt.
 - Dựng HTML Apple-like trước: nền trắng/xám nhẹ, chữ rõ, đường kẻ mảnh, bảng QA là nội dung chính; badge Đạt/Chưa đạt có chữ. Biểu đồ số ca theo nhóm và trạng thái, không vẽ số liệu chưa đo.
 - Kiểm HTML, rồi xuất chính HTML thành PDF A4 ngang. PDF mở mọi chi tiết và in mọi ca, không chỉ lấy ca đại diện. Giữ output nguyên văn; quy trình và evidence dài được tham chiếu sang bảng phụ.

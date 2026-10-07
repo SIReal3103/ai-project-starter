@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chỉ số nghiệm thu QA AI"
+  short_description: "Chọn chỉ số test, eval, độ trễ, bảo mật và bảng QA"
+  default_prompt: "Dùng $ai-qa-metrics chọn chỉ số nghiệm thu sản phẩm này, định nghĩa cách đo, mẫu số, ngưỡng và bằng chứng cần thu cho test phần mềm, AI, hiệu năng và bảo mật. Lập bảng QA 7 cột với Đạt/Chưa đạt riêng; giữ chưa đo cho phần chưa có kết quả."

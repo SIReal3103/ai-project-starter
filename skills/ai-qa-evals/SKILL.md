@@ -1,11 +1,37 @@
 ---
 name: ai-qa-evals
-description: Chạy hoặc chạy lại eval chatbot, RAG, LLM và agent; thu bằng chứng và xuất báo cáo nghiệm thu QA tiếng Việt dạng HTML/PDF. Dùng khi cần test chất lượng AI hoặc tái sử dụng bộ QA cho sản phẩm mới; không dùng chỉ để lập kế hoạch hay thiết kế giao diện.
+description: Điều phối kiểm thử sản phẩm AI từ unit/API/UI, coverage và eval LLM/RAG/agent tới thời gian phản hồi, tải, bảo mật và quyền riêng tư; thu evidence và báo cáo QA tiếng Việt. Dùng khi chạy hoặc chuẩn bị bộ nghiệm thu, regression hay báo cáo, không chỉ để thiết kế giao diện.
 ---
 
 # QA và eval sản phẩm AI
 
 Chọn đúng sản phẩm, dữ liệu và ngân sách của người dùng. Bàn giao kết quả thực, ca Đạt/Chưa đạt, phần chưa đo và báo cáo có thể truy vết. Không thay một yêu cầu kiểm sản phẩm thật bằng demo dùng luật.
+
+## Chọn đủ phạm vi trước khi chạy
+
+Đọc tài liệu phù hợp từ chính thư mục skill; copy nguyên thư mục khi cài. “Đầy đủ” nghĩa là đã xét mọi lớp liên quan tới sản phẩm và nêu rõ phần thiếu, không phải cài tất cả thư viện hoặc gộp chúng thành một điểm.
+
+| Phạm vi | Đọc và thực hiện | Phải có trong báo cáo nếu áp dụng |
+| --- | --- | --- |
+| Unit, integration, API, UI, coverage, accessibility, build | [Kiểm thử phần mềm](references/software-testing.md) | Ca pass/fail/skip/error, line/branch coverage với phạm vi, UI trace và lỗi thực |
+| Chatbot, RAG, hội thoại nhiều lượt, agent, guardrails, judge | [Eval AI](references/llm-agent-evaluation.md) | Dataset/reference độc lập, response/context/state, score từng ca và giới hạn judge |
+| Thời gian phản hồi, streaming, tải, lỗi, retry/cancel, chi phí | [Hiệu năng và độ tin cậy](references/performance-testing.md) | E2E p50/p95/p99, TTFT nếu streaming, RPS/concurrency, timeout/error, workload và mẫu số |
+| Secret, dependency, code, web/API, auth/tenant, dữ liệu riêng | [Kiểm bảo mật và quyền riêng tư](references/security-testing.md) | Finding đã xác minh, ca quyền/state, lộ dữ liệu, xóa/retention, phạm vi scan |
+
+Có thể sao chép [manifest trống](assets/run-manifest-template.json) vào thư mục run. Điền metadata và giới hạn thật; đây là sổ theo dõi thực thi, không phải input của renderer QA. `tools` lưu tên/version/command đã khử secret/exit/elapsed/artifact; `measurements` lưu metric/value/unit/n/numerator/denominator/method/threshold/evidence. Giữ null cho phần chưa biết.
+
+Trước lượt chạy lập ma trận `nhóm | áp dụng? | ca/công cụ | command | dữ liệu | budget | evidence | trạng thái`. Tính năng có thật nhưng thiếu test không được N/A; dùng chưa chạy/bị chặn. Scan sạch, coverage cao hoặc HTTP 200 không thay ca chức năng hoặc eval nội dung.
+
+### Hai mức thực thi
+
+- **Khoảng 10 phút, môi trường đã sẵn sàng:** 1 phút preflight; 3 phút test trọng yếu/contract và secret scan phạm vi nhỏ; 3 phút eval tập nhỏ cố định kèm đo latency thật trên chính request đó; 1 phút đọc lỗi/evidence; 2 phút báo cáo. Chạy việc độc lập đồng thời khi tài nguyên cho phép. Đây là ưu tiên, không cam kết mọi framework cài và chạy kịp; phần chưa kịp giữ chưa chạy. Chưa có hạ tầng thì dành thời gian chuẩn bị và báo đúng giới hạn.
+- **Nghiệm thu mở rộng:** unit/integration/E2E và coverage; AI holdout/multi-turn; workload/streaming/cold-warm đã chốt; security code/dependency/auth/privacy và DAST trong scope; review lỗi, regression/retest rồi quyết định. Chốt thời gian, request, token, concurrency và mức chi phí trước run.
+
+### Trạng thái công cụ và cổng nghiệm thu
+
+Mỗi công cụ ghi `chưa cài / đã cài / đã chạy / lỗi thực thi`, version và exit code; mỗi ca ghi trạng thái QA riêng. “Đã cài Ragas” không có nghĩa “đã đo faithfulness”. Judge/scan lỗi hoặc không có tests phải hiển thị, không tạo artifact mẫu rồi tính là kiểm thật.
+
+Cổng nghiệm thu tách: chức năng; AI; hiệu năng; bảo mật/quyền; khả năng quan sát và phục hồi. Không tự đặt một ngưỡng chung. Chưa phê duyệt ngưỡng vẫn có thể báo số đo; mọi vi phạm bắt buộc đã được xác minh phải giữ trong kết luận. Lưu người/ngày phê duyệt thật nếu có.
 
 ## Tìm bộ công cụ
 
@@ -66,10 +92,10 @@ npx playwright install chromium
 node render-pdf.mjs --input runs/product-01/report.html --output runs/product-01/report.pdf
 ```
 
-Cần Node.js 18+; Linux có thể cần `npx playwright install --with-deps chromium`. PDF A4 ngang chứa mọi ca, mở mọi chi tiết, không giữ bộ lọc màn hình. Không dùng ReportLab, chọn ca đại diện hoặc cắt output. `render.py --pdf` cũng gọi exporter HTML này; hai bước riêng giúp kiểm thiết kế trước khi in.
+Cần Node.js 18+; Linux có thể cần `npx playwright install --with-deps chromium`. PDF A4 ngang chứa mọi ca, mở mọi chi tiết, không giữ bộ lọc màn hình. Không dùng ReportLab, chọn ca đại diện hoặc cắt output. Dùng lệnh Node trên để chắc chắn xuất chính HTML đã xem; chỉ dùng `render.py --pdf` sau khi xác minh phiên bản renderer của checkout đã chuyển sang exporter HTML.
 
 Kiểm tổng số từ ca, phân biệt coverage và tỷ lệ đạt, đối chiếu evidence, xem HTML ở màn hình lớn/nhỏ và render mọi trang PDF để kiểm tiếng Việt/cắt nội dung. Bàn giao report-data, HTML/PDF, bằng chứng được phép, lỗi còn mở và hướng cải thiện. Khi chỉ dựng lại report, nói rõ không có test mới.
 
 ## Công bố
 
-Skill không mặc nhiên cho phép commit/push, upload evidence hay sửa quyền repo. Khi người dùng đã yêu cầu cập nhật GitHub, kiểm diff và dữ liệu nhạy cảm, chỉ đưa file thuộc task, giữ lịch sử kết quả và xác nhận remote sau push. Không đưa venv, model cache, key hoặc dữ liệu người dùng riêng tư vào gói.
+Yêu cầu soạn/cập nhật skill không tự tạo lượt scan, load hay inference. Skill không mặc nhiên cho phép commit/push, upload evidence hay sửa quyền repo. Khi người dùng đã yêu cầu cập nhật GitHub, kiểm diff và dữ liệu nhạy cảm, chỉ đưa file thuộc task, giữ lịch sử kết quả và xác nhận remote sau push. Không đưa venv, model cache, key hoặc dữ liệu người dùng riêng tư vào gói.

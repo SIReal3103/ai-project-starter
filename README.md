@@ -63,7 +63,7 @@ Viết tài liệu độc lập để bàn giao cho agent; chưa triển khai �
 Skill cũng dùng để rà soát gameplay có sẵn. Yêu cầu thiết kế không tự cấp quyền xây app, gọi dịch vụ trả phí hoặc xuất bản. Các cơ chế và số minh họa là đề xuất cần chơi thử, không phải sản phẩm AI đã được kiểm chứng.
 ## Bộ skill độc lập cho agent mới
 
-Có **24 skill**: 14 hướng C1–I2 và 10 năng lực dùng chung. Mỗi gói có `SKILL.md`, `agents/openai.yaml` và references local; không cần lịch sử chat, repo nguồn hay skill khác để hiểu cách làm. Chỉ đọc đúng phần theo tác vụ, không nạp cả bộ.
+Nhóm phát triển sản phẩm có **24 skill**: 14 hướng C1–I2 và 10 năng lực dùng chung. Ngoài nhóm này có bộ QA thực hành `ai-qa-evals` và danh mục `ai-qa-metrics` bên dưới. Mỗi gói có `SKILL.md`, `agents/openai.yaml` và references local; không cần lịch sử chat, repo nguồn hay skill khác để hiểu cách làm. Chỉ đọc đúng phần theo tác vụ, không nạp cả bộ.
 
 | Skill | Dùng khi |
 |---|---|
@@ -116,6 +116,27 @@ python3 -m unittest discover -s scripts/tests -p 'test_*.py'
 ```
 
 `sync-skills.py --skill ai-product-planning` chỉ đồng bộ một gói; lệnh cũ `sync-planning-skill.py` vẫn dùng được cho gói planning. `--check` không ghi. Không sửa trực tiếp `references/` sinh tự động: `task-contract.md` chứa cách nhận việc/bàn giao, `techstack-guide.md` chứa lát cắt kỹ thuật, `planning-handoff.md` chỉ đọc khi cần kế hoạch. Cập nhật bản cài cá nhân từ gói mới sau khi sync. Kiểm cấu trúc/đồng bộ không chứng minh hành vi; cần review và thử tình huống độc lập.
+
+## Skill kiểm thử và nghiệm thu đầy đủ
+
+- [ai-qa-evals](skills/ai-qa-evals/SKILL.md): quy trình thực thi test phần mềm, eval AI, đo phản hồi/tải và kiểm bảo mật/quyền riêng tư; chọn mức smoke khoảng 10 phút hoặc nghiệm thu mở rộng.
+- [ai-qa-metrics](skills/ai-qa-metrics/SKILL.md): 34 nhóm chỉ số theo tính năng, công thức/mẫu số, dữ liệu cần thu, cách kết luận và bảng QA **7 cột với Pass/Fail riêng**.
+
+| Muốn làm gì? | Hướng dẫn thực hành |
+| --- | --- |
+| Unit/API/integration/UI, coverage, accessibility | [Vitest, pytest/unittest, coverage.py, Playwright/axe](skills/ai-qa-evals/references/software-testing.md) |
+| Eval chatbot/RAG/agent, multi-turn, guardrail, judge | [Ragas, DeepEval, Promptfoo và adapter sản phẩm](skills/ai-qa-evals/references/llm-agent-evaluation.md) |
+| Đo p50/p95/p99, TTFT, streaming, tải, timeout | [curl, k6, timestamp/trace và workload](skills/ai-qa-evals/references/performance-testing.md) |
+| Secret/dependency/code/web, quyền/tenant, PII và xóa dữ liệu | [Gitleaks, audit, SAST, ZAP và ca quyền/state](skills/ai-qa-evals/references/security-testing.md) |
+
+Copy nguyên thư mục skill, gồm `references/` và `assets/` nếu có, khi cài trên máy khác. Các reference QA trên được viết riêng; không thuộc ba file trích nguồn tự sinh bởi `sync-skills.py`. Hướng dẫn có lệnh và giới hạn, không khẳng định công cụ đã cài/chạy trên mọi sản phẩm. Mẫu dữ liệu không được coi là bằng chứng thật.
+
+```text
+Dùng $ai-qa-evals đánh giá [repo/URL sản phẩm] và dùng $ai-qa-metrics chọn phép đo.
+Ngân sách: [thời gian, request/token, chi phí]. Môi trường và scope: [test].
+Xét đủ chức năng/UI/API, AI, latency/load, bảo mật/quyền riêng tư theo tính năng có thật.
+Lưu evidence và báo phần thiếu; xuất bảng QA 7 cột, HTML trước rồi PDF.
+```
 
 ## Chạy lại bộ eval
 
