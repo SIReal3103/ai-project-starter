@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv*/
+node_modules/
+.playwright-browsers/
+runs/
+reports/*
+!reports/bao-cao-evals.html
+!reports/bao-cao-evals.pdf
+*.log
+.env
+.env.*
+.pytest_cache/
+.DS_Store
+._*
