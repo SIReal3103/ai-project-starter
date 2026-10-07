@@ -56,7 +56,17 @@ python3 qa-report/render.py --input runs/product-01/report-data.json \
   --output runs/product-01/report.html
 ```
 
-Để xuất PDF, cài `qa-report/requirements.txt` vào venv riêng rồi chạy cùng lệnh với `--pdf runs/product-01/report.pdf`. PDF mặc định là tổng hợp, có toàn bộ chỉ mục và metric nhưng chỉ một phiếu đại diện mỗi nhóm; dùng `--all-cases` khi cần mọi phiếu. HTML luôn có đủ chi tiết. Không đổi thiết kế Apple-like đã có nếu người dùng chỉ yêu cầu dữ liệu mới.
+Báo cáo dùng bảng QA bảy cột: Mã ca; Tình huống & đầu vào; Kết quả mong đợi; Kết quả thực tế (hoặc Kết quả giả lập với mock); Kết quả (Pass/Fail); Nhận xét QA; Bằng chứng / Mã lỗi. Cột Kết quả phải riêng, hiển thị Đạt (Pass), Chưa đạt (Fail), Chưa chạy, Bị chặn hoặc Không áp dụng; không dùng “Pass/No” hoặc gộp trạng thái vào mã ca. Điều kiện trước, bước thực hiện, priority và retest giữ ở chi tiết phụ có mã ca tham chiếu. Nếu renderer đang dùng còn năm cột, cập nhật bố cục bảy cột trước khi xuất báo cáo; không đổi schema trạng thái hoặc raw output chỉ để thay bố cục. Eval và defect dùng bảng riêng, diễn giải dễ hiểu. Dùng thiết kế Apple-like trong kit, không chuyển các ca thành thẻ dài.
+
+**Kiểm HTML trước rồi mới xuất PDF từ chính HTML đó.** Từ thư mục kit:
+
+```sh
+npm ci
+npx playwright install chromium
+node render-pdf.mjs --input runs/product-01/report.html --output runs/product-01/report.pdf
+```
+
+Cần Node.js 18+; Linux có thể cần `npx playwright install --with-deps chromium`. PDF A4 ngang chứa mọi ca, mở mọi chi tiết, không giữ bộ lọc màn hình. Không dùng ReportLab, chọn ca đại diện hoặc cắt output. `render.py --pdf` cũng gọi exporter HTML này; hai bước riêng giúp kiểm thiết kế trước khi in.
 
 Kiểm tổng số từ ca, phân biệt coverage và tỷ lệ đạt, đối chiếu evidence, xem HTML ở màn hình lớn/nhỏ và render mọi trang PDF để kiểm tiếng Việt/cắt nội dung. Bàn giao report-data, HTML/PDF, bằng chứng được phép, lỗi còn mở và hướng cải thiện. Khi chỉ dựng lại report, nói rõ không có test mới.
 
