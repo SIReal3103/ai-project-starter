@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Story Gameplay"
+  short_description: "Thiết kế gameplay phiêu lưu và nhập vai với AI"
+  default_prompt: "Dùng $ai-story-gameplay thiết kế gameplay phiêu lưu văn bản AI theo ý tưởng và ràng buộc của tôi, làm rõ vòng chơi, quyền tự do, nhân vật và hậu quả để bàn giao cho agent."

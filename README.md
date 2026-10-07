@@ -9,6 +9,8 @@ Repo chứa hướng dẫn BTC, script thử gateway và bộ báo cáo/template
 | Hướng dẫn chatbot và agent BTC — bản gốc | [agent-chatbot-btc-guide.md](agent-chatbot-btc-guide.md) |
 | Hướng dẫn voicebot BTC — bản gốc | [agent-voice-bot-btc-guide.md](agent-voice-bot-btc-guide.md) |
 | Các hướng phát triển sản phẩm — bản gốc | [cac-huong-phat-trien-san-pham-dua-vao-techstack.md](cac-huong-phat-trien-san-pham-dua-vao-techstack.md) |
+| Gameplay chung cho game phiêu lưu văn bản AI | [Khung gameplay](skills/ai-story-gameplay/references/gameplay-guide.md) |
+| Skill tạo và rà soát gameplay AI | [ai-story-gameplay](skills/ai-story-gameplay/SKILL.md) |
 | Script thử gateway — bản gốc | [gateway-test.sh](gateway-test.sh) |
 | **Hướng dẫn agent và prompt giao việc cho eval** | [chatbot-eval-kit/agent-guide.md](chatbot-eval-kit/agent-guide.md) |
 | **Báo cáo mẫu HTML** | [bao-cao-evals.html](chatbot-eval-kit/reports/bao-cao-evals.html) |
@@ -20,6 +22,26 @@ Repo chứa hướng dẫn BTC, script thử gateway và bộ báo cáo/template
 | **Hướng dẫn trang Crawl & RAG pipeline** | [huong-dan-crawl-rag-pipeline.md](huong-dan-crawl-rag-pipeline.md) |
 
 Ba hướng dẫn BTC/techstack, script gateway và guide giao việc eval giữ nguyên nội dung nguồn. HTML/PDF và bốn JSON kết quả mẫu cũng giữ nguyên từ gói báo cáo đã cung cấp. Mã eval/setup giữ các sửa lỗi portability để chạy độc lập; ZIP chứa cùng bộ kit đang có trong repo.
+
+## Skill thiết kế gameplay phiêu lưu AI
+
+[Khung gameplay](skills/ai-story-gameplay/references/gameplay-guide.md) mô tả vòng chơi, hành động tự do, nhân vật, hậu quả, bộ nhớ, combat tùy chọn và voice/TTS. Dùng chung cho nhiều bối cảnh; không cố định một cốt truyện hoặc nhà cung cấp AI. Tài liệu nằm trong gói skill để bản copy vẫn tự đủ nội dung.
+
+Copy toàn bộ `skills/ai-story-gameplay/` vào `$CODEX_HOME/skills` nếu đã cấu hình, hoặc `~/.codex/skills` theo mặc định. Đối chiếu trước khi thay một bản cài đã tùy chỉnh. Skill gồm `SKILL.md`, metadata và `references/gameplay-guide.md`; không cần cài thư viện hay gọi API để dùng hướng dẫn.
+
+```text
+Dùng $ai-story-gameplay viết gameplay chung cho game phiêu lưu văn bản AI.
+Giữ cơ chế tái sử dụng, không gắn vào một câu chuyện cụ thể.
+```
+
+```text
+Dùng $ai-story-gameplay thiết kế gameplay cho game web nhập vai của tôi.
+Bối cảnh: [ý tưởng]. Người chơi: [đối tượng].
+Yêu cầu: [hành động tự do, mức combat, voice/TTS nếu cần].
+Viết tài liệu độc lập để bàn giao cho agent; chưa triển khai ứng dụng.
+```
+
+Skill cũng dùng để rà soát gameplay có sẵn. Yêu cầu thiết kế không tự cấp quyền xây app, gọi dịch vụ trả phí hoặc xuất bản. Các cơ chế và số minh họa là đề xuất cần chơi thử, không phải sản phẩm AI đã được kiểm chứng.
 
 ## Chạy lại bộ eval
 
