@@ -2,19 +2,60 @@
 
 Trang quản trị local cho luồng **nhập nguồn → kiểm sơ bộ → người duyệt → kho tri thức**. FastAPI + SQLite FTS5 + giao diện web tiếng Việt. Tích hợp parser và chunker thật từ [scope-data-bot](https://github.com/Qyroven/scope-data-bot) tại commit `cb37446a00c6283cbb596df524885cfcb08a9fe7`.
 
-## Chạy
+## Clone, cài và chạy trên máy của bạn
 
-Yêu cầu Python 3.12, Git, SQLite có FTS5 và mạng khi cài dependencies/tokenizer lần đầu.
+Ứng dụng có repo riêng: https://github.com/SIReal3103/crawl-rag-pipeline. Không cần clone repo tài liệu `ai-project-starter` để chạy ứng dụng.
+
+**Chuẩn bị:** Git, Python **3.12** có `venv`/`pip`, Bash và kết nối mạng lúc cài lần đầu. macOS/Linux dùng Terminal; Windows dùng terminal **WSL Ubuntu**, chạy toàn bộ các lệnh trong WSL. Các script Bash này không chạy trực tiếp trong PowerShell. Chưa có kiểm chứng cài đặt Windows native.
+
+Kiểm công cụ trong terminal:
 
 ```bash
-cd rag-review
+git --version
+python3.12 --version
+```
+
+Nếu thiếu, cài Git và Python 3.12 bằng trình quản lý gói của hệ điều hành hoặc bộ cài Python trước. Chọn một thư mục bạn có quyền ghi làm nơi chứa project, mở terminal tại đó, rồi chạy:
+
+```bash
+git clone https://github.com/SIReal3103/crawl-rag-pipeline.git
+cd crawl-rag-pipeline
 bash setup.sh
 bash run.sh
 ```
 
-Mở **http://127.0.0.1:8765**. `setup.sh` clone upstream riêng vào `.runtime/scope-data-bot`, khóa đúng commit và cài runtime `.venv`. Không chép code upstream vào Git của đội; upstream hiện chưa khai báo license. Không thay commit của clone đã có.
+**Lệnh `setup.sh` và `run.sh` chạy trong thư mục `crawl-rag-pipeline` vừa clone**, nơi có `app.py`. Nếu Python 3.12 trên máy mang tên `python3`, kiểm `python3 --version` rồi dùng `PYTHON_BIN=python3 bash setup.sh`.
 
-Có thể đặt `RAG_REVIEW_PORT`, `RAG_REVIEW_DATA`, `RAG_REVIEW_VENV`, `RAG_REVIEW_PYTHON` và `SCOPE_BOT_PATH`. Parse/chunk và tìm từ khóa không cần key AI; tạo index/semantic evidence cần key của provider đã chọn. Không tự đọc `.env`. Worker nhận môi trường giới hạn, BTC capability gates đóng; chỉ dùng parse/chunk local. Tokenizer có thể tải vocabulary công khai một lần; nội dung tài liệu không được gửi tới model.
+`setup.sh` tự tải dependency, clone parser/chunker upstream đúng commit vào `.runtime/scope-data-bot`, tạo `.venv` trong project và chuẩn bị tokenizer. Bạn không cần tự clone upstream hay dùng file ở máy tác giả. Lần đầu cần mạng; thời gian phụ thuộc tốc độ tải. Không đưa key hoặc dữ liệu mẫu riêng vào bản cài mới.
+
+Giữ terminal chạy server, mở trình duyệt **trên cùng máy** tại **http://127.0.0.1:8765/#pipeline**. Localhost là địa chỉ của ứng dụng sau khi bạn chạy server, không phải website đã được host trên GitHub. Trang đầu chưa có dữ liệu; làm theo [hướng dẫn thao tác](../huong-dan-crawl-rag-pipeline.md).
+
+Dừng server bằng **Ctrl+C** trong terminal. Lần sau mở terminal trong project và chỉ chạy `bash run.sh`. Khi muốn cập nhật, dừng server rồi chạy:
+
+```bash
+git pull --ff-only
+bash setup.sh
+bash run.sh
+```
+
+Nếu cổng đang bận:
+
+```bash
+RAG_REVIEW_PORT=8766 bash run.sh
+```
+
+Sau đó mở **http://127.0.0.1:8766/#pipeline**. Không cần dừng ứng dụng khác đang dùng 8765.
+
+| Vấn đề | Cách xử lý |
+| --- | --- |
+| `python3.12: command not found` | Cài Python 3.12; nếu executable tên khác, đặt `PYTHON_BIN` khi setup |
+| Không tạo được venv/pip | Cài thành phần `venv`/`pip` cho đúng Python 3.12 rồi chạy lại setup |
+| `setup.sh: No such file` | Kiểm đang ở thư mục `crawl-rag-pipeline` có `app.py`, không phải thư mục cha hoặc repo hướng dẫn |
+| Setup lỗi tải dependency/tokenizer | Kiểm mạng và lỗi hiển thị; chưa chạy server cho tới khi setup thành công |
+| Upstream khác commit | Dùng clone mặc định mới hoặc cấu hình `SCOPE_BOT_PATH` đúng commit; script không tự ghi đè checkout khác |
+| Trình duyệt không kết nối | Giữ terminal server mở, kiểm lỗi startup và dùng đúng cổng; trên Windows mở từ máy chạy WSL |
+
+Parse/chunk, duyệt và tìm từ khóa không cần key AI. Tạo index semantic và lấy evidence cần key hợp lệ của provider đã chọn, cấu hình trong **Cấu hình API key**; có thể phát sinh phí. Chạy server thành công không xác nhận key/model đã được cấp quyền.
 
 ## Dùng trang
 

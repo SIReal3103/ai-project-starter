@@ -16,7 +16,7 @@ Repo để chung các hướng dẫn được cung cấp, script thử gateway, 
 | Template HTML và ca đánh giá | [report-template.html](chatbot-eval-kit/templates/report-template.html), [case-template.json](chatbot-eval-kit/templates/case-template.json) |
 | Toàn bộ bộ eval, dataset, adapter, Ragas/DeepEval và cách chạy | [chatbot-eval-kit/README.md](chatbot-eval-kit/README.md) |
 | Gói ZIP bộ eval để giao cho agent | [chatbot-agent-guardrail-eval-template.zip](chatbot-agent-guardrail-eval-template.zip) |
-| **Ứng dụng Crawl & RAG pipeline** | [rag-review/README.md](rag-review/README.md) |
+| **Ứng dụng Crawl & RAG pipeline** | [Repo crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline) |
 | **Hướng dẫn trang Crawl & RAG pipeline** | [huong-dan-crawl-rag-pipeline.md](huong-dan-crawl-rag-pipeline.md) |
 
 Ba hướng dẫn BTC/techstack, script gateway và guide giao việc eval giữ nguyên nội dung nguồn. HTML/PDF và bốn JSON kết quả mẫu cũng giữ nguyên từ gói báo cáo đã cung cấp. Mã eval/setup giữ các sửa lỗi portability để chạy độc lập; ZIP chứa cùng bộ kit đang có trong repo.
@@ -37,16 +37,17 @@ python3 report.py --input runs/demo-01/results.json --output reports/demo-01.htm
 
 Báo cáo có sẵn là **mẫu tổng hợp**, không phải kết luận chất lượng của sản phẩm mới. Cấu hình model, endpoint và quota trong hướng dẫn gốc cần được xác nhận tại thời điểm sử dụng; lượt đóng gói này không gọi gateway hay provider.
 
-## Chạy ứng dụng Crawl & RAG pipeline
+## Clone và chạy ứng dụng Crawl & RAG pipeline
 
-Cần Python 3.12, Git và shell Bash (macOS/Linux hoặc WSL). Từ root repo:
+Ứng dụng có [repo GitHub riêng](https://github.com/SIReal3103/crawl-rag-pipeline). Cần Git, Python 3.12 và Bash (macOS/Linux hoặc WSL trên Windows). Mở terminal tại nơi muốn lưu project:
 
-```sh
-cd rag-review
+```bash
+git clone https://github.com/SIReal3103/crawl-rag-pipeline.git
+cd crawl-rag-pipeline
 bash setup.sh
 bash run.sh
 ```
 
-Mở **http://localhost:8765/#pipeline**. Nếu cổng 8765 đang được ứng dụng khác dùng, chạy `RAG_REVIEW_PORT=8766 bash run.sh` rồi mở cổng 8766. Setup tải dependency/upstream vào thư mục riêng của ứng dụng, không cần checkout trên máy cũ. Kho tài liệu, key và lịch sử phiên của máy nguồn không được sao chép; bản mới bắt đầu với dữ liệu riêng. Chi tiết tại [README ứng dụng](rag-review/README.md).
+Giữ terminal mở và truy cập **http://127.0.0.1:8765/#pipeline** trên cùng máy. Xem [README ứng dụng](https://github.com/SIReal3103/crawl-rag-pipeline#readme) để cài điều kiện cần, đổi cổng, cập nhật và xử lý lỗi.
 
-Dùng **Code → Download ZIP** trên GitHub để lấy cả hướng dẫn, ứng dụng pipeline và bộ eval. File `chatbot-agent-guardrail-eval-template.zip` riêng chỉ chứa bộ eval.
+Thư mục `rag-review/` ở repo tài liệu là bản mã đi kèm trước khi tách. Để cài mới hoặc cập nhật ứng dụng, dùng repo `crawl-rag-pipeline` ở trên. Bộ báo cáo/eval tiếp tục nằm trong repo tài liệu này.

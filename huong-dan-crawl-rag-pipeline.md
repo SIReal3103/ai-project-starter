@@ -2,7 +2,20 @@
 
 Hướng dẫn sử dụng trang **Crawl & RAG pipeline** của ứng dụng Human Mind, đối chiếu giao diện và mã ứng dụng ngày 07/10/2026. Địa chỉ mặc định khi ứng dụng đang chạy trên máy của bạn: **http://localhost:8765/#pipeline**.
 
-Ứng dụng được để cùng repo trong [rag-review](rag-review/README.md). Sau clone, chạy `cd rag-review`, `bash setup.sh`, rồi `bash run.sh`; mở địa chỉ ở trên. Cần Python 3.12, Git và Bash. Không sao chép dữ liệu hoặc credential của máy nguồn. Localhost trỏ tới máy đang mở trình duyệt; nếu cổng 8765 đã được dùng, chọn `RAG_REVIEW_PORT=8766 bash run.sh` và mở cổng tương ứng.
+## Cài ứng dụng trước khi mở trang
+
+Repo ứng dụng: [SIReal3103/crawl-rag-pipeline](https://github.com/SIReal3103/crawl-rag-pipeline). Cần Git, Python 3.12 có venv/pip và Bash; Windows dùng terminal WSL. Mở terminal tại thư mục muốn chứa project:
+
+```bash
+git clone https://github.com/SIReal3103/crawl-rag-pipeline.git
+cd crawl-rag-pipeline
+bash setup.sh
+bash run.sh
+```
+
+Hai script chạy **trong thư mục `crawl-rag-pipeline` vừa clone**. Setup tự cài dependency và upstream; không cần repo hoặc runtime trên máy người khác. Giữ terminal server mở, rồi truy cập **http://127.0.0.1:8765/#pipeline** trên cùng máy. Nếu cổng bận, dùng `RAG_REVIEW_PORT=8766 bash run.sh` và mở cổng 8766. Dừng bằng Ctrl+C. Lần sau vào lại thư mục project và chạy `bash run.sh`.
+
+[README ứng dụng](https://github.com/SIReal3103/crawl-rag-pipeline#readme) có cách kiểm Python, xử lý lỗi cài đặt, cập nhật và cấu hình. Clone repo hướng dẫn hoặc bấm link localhost khi server chưa chạy sẽ không mở được ứng dụng.
 
 ## Luồng cần hoàn thành
 
@@ -75,7 +88,7 @@ Dùng **Tra cứu từ khóa không dùng key →**, kiểm đúng bộ tài li�
 
 | Hiện tượng | Xử lý |
 | --- | --- |
-| Trang không mở được | Kiểm ứng dụng đã chạy trên đúng máy/cổng; chạy ứng dụng theo README trong `rag-review/` |
+| Trang không mở được | Kiểm ứng dụng đã chạy trên đúng máy/cổng; chạy ứng dụng theo README ứng dụng |
 | Crawl không có tài liệu | Đọc trace, dùng URL bài/PDF cụ thể, thử 1 trang và độ sâu 0 |
 | DuckDuckGo HTTP 202/challenge | Chuyển sang URL trực tiếp; không đổi key AI hoặc tìm cách vượt challenge |
 | Tài liệu bị chặn duyệt | Kiểm bản gốc, lỗi parse/thiếu nội dung/metadata; sửa hoặc nhập lại nguồn đầy đủ |
@@ -87,7 +100,7 @@ Dùng **Tra cứu từ khóa không dùng key →**, kiểm đúng bộ tài li�
 
 ## 6. Nối pipeline vào bộ eval
 
-Dùng [hướng dẫn agent và prompt giao việc](chatbot-eval-kit/agent-guide.md). Chuẩn bị câu hỏi, expected answer và gold context độc lập từ tài liệu đã được kiểm.
+Dùng [hướng dẫn agent và prompt giao việc](https://github.com/SIReal3103/ai-project-starter/blob/main/chatbot-eval-kit/agent-guide.md). Chuẩn bị câu hỏi, expected answer và gold context độc lập từ tài liệu đã được kiểm.
 
 - Nếu chỉ kiểm truy hồi, thu các đoạn/mã nguồn thật mà pipeline trả về. Chưa có câu trả lời thì chưa chấm chất lượng trả lời.
 - Khi có chatbot/agent, adapter cần gọi sản phẩm thật và trả answer, retrieved contexts, citations cùng trace có thật.
